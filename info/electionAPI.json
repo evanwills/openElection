@@ -1,0 +1,432 @@
+{
+  "electionAdminClass": {
+    "constructor": {
+      "db": "EnhancedPDO",
+      "user": "User"
+    },
+
+    "methods": {
+      "listElections": {
+        "params": {
+          "start": "integer",
+          "count": "integer"
+        },
+        "return": [{
+          "id": "integer/electionID",
+          "name": "string"
+        }]
+      },
+      "searchElections": {
+        "params": {
+          "namePart": "string",
+          "count": "integer"
+        },
+        "return": [{
+          "id": "integer/electionID",
+          "name": "string"
+        }]
+      },
+      "getElection": {
+        "params": {
+          "id": "integer/electionID"
+        },
+        "return": [{
+          "id": "integer",
+          "name": "string",
+          "description": "string/HTML",
+          "ruleID": "integer",
+          "votingStartDate": "string/date-time",
+          "emails": [{
+            "id": "integer/electionEmailID",
+            "type": "string"
+          }],
+          "returningOfficer": "string/ACUstaffID",
+          "closedComplete": "boolean",
+          "isReferendum": "boolean",
+          "created": "timestamp",
+          "updated": "timestamp",
+          "createdBy": "adminID",
+          "updatedBy": "adminID"
+        }]
+      },
+      "createElection": {
+        "params": {
+          "name": "string",
+          "description": "string/HTML",
+          "ruleID": "integer",
+          "votingStartDate": "string/date-time",
+          "returningOfficer": "string/ACUstaffID",
+          "isReferendum": "boolean"
+        },
+        "return": "integer/electionID"
+      },
+      "updateElection": {
+        "params": {
+          "electionID": "integer",
+          "fields": {
+            "name": "string",
+            "description": "string/HTML",
+            "ruleID": "integer",
+            "votingStartDate": "string/date-time",
+            "returningOfficer": "string/ACUstaffID",
+            "isReferendum": "boolean"
+          }
+        },
+        "return": "boolean"
+      },
+      "deleteElection": {
+        "params": {
+          "electionID": "integer"
+        },
+        "return": "boolean"
+      },
+
+      "listElectionEmails": {
+        "params": "void",
+        "return": [{
+          "id": "integer/electionEmailID",
+          "name": "string"
+        }]
+      },
+      "getElectionEmails": {
+        "params": {
+          "id": "integer/electionEmailID"
+        },
+        "return": {
+          "id": "integer",
+          "type": "string",
+          "from": "string/email",
+          "subject": "string",
+          "message": "string/HTML",
+          "sendCount": "integer",
+          "sendStart": "string/date-time",
+          "sendEnd": "string/date-time",
+          "created": "timestamp",
+          "updated": "timestamp",
+          "createdBy": "integer/adminID",
+          "updatedBy": "integer/adminID"
+        }
+      },
+      "createElectionEmail": {
+        "params": {
+          "electionID": "integer",
+          "type": "integer/emailTypeID",
+          "email": {
+            "subject": "string",
+            "message": "string/HTML",
+            "send": "string/date-time"
+          }
+        },
+        "return": "integer/electionEmailID"
+      },
+      "updateElectionEmail": {
+        "params": {
+          "electionID": "integer",
+          "type": "integer/emailTypeID",
+          "email": {
+            "subject": "string",
+            "message": "string/HTML",
+            "send": "string/date-time"
+          }
+        },
+        "return": "boolean"
+      },
+      "deleteElectionEmail": {
+        "params": {
+          "electionID": "integer",
+          "type": "integer/emailTypeID"
+        },
+        "return": "boolean"
+      },
+      "sendElectionEmail": {
+        "params": {
+          "electionID": "integer",
+          "type": "integer/emailTypeID"
+        },
+        "return": "boolean"
+      },
+
+      "listElectionRules": {
+        "params": {
+          "start": "integer",
+          "count": "integer"
+        },
+        "return": [{
+          "id": "integer/rulesID",
+          "name": "string"
+        }]
+      },
+      "searchElectionRules": {
+        "params": {
+          "namePart": "string",
+          "count": "integer"
+        },
+        "return": [{
+          "id": "integer/rulesID",
+          "name": "string"
+        }]
+      },
+      "getElectionRule": {
+        "params": {
+          "id": "integer/rulesID"
+        },
+        "return": [{
+          "id": "integer",
+          "name": "string",
+          "description": "string",
+          "cohortFilter": "string/json",
+          "countMethod": "integer/countMethodID",
+          "countMethodOptions": [{
+            "key": "string",
+            "value": "mixed"
+          }],
+          "nominationPeriod": "integer/days",
+          "campaignPeriod": "integer/days",
+          "votingPeriod": "integer/days",
+          "winnerCount": "integer",
+          "nominatorCount": "integer",
+          "created": "timestamp",
+          "updated": "timestamp",
+          "createdBy": "integer/adminID",
+          "updatedBy": "integer/adminID"
+        }]
+      },
+      "createElectionRules": {
+        "params": {
+          "name": "string",
+          "description": "string",
+          "cohortFilter": "string/json",
+          "countMethod": "integer/countMethodID",
+          "countMethodOptions": [{
+            "key": "string",
+            "value": "string, integer, boolean, float"
+          }],
+          "nominationPeriod": "integer/days",
+          "campaignPeriod": "integer/days",
+          "votingPeriod": "integer/days",
+          "winnerCount": "integer",
+          "nominatorCount": "integer"
+        },
+        "return": "integer/rulesID"
+      },
+      "updateElectionRules": {
+        "params": {
+          "rulesID": "integer",
+          "fields": {
+            "name": "string",
+            "description": "string",
+            "cohortFilter": "string/json",
+            "countMethod": "integer/countMethodID",
+            "countMethodOptions": [{
+              "key": "string",
+              "value": "mixed"
+            }],
+            "nominationPeriod": "integer/days",
+            "campaignPeriod": "integer/days",
+            "votingPeriod": "integer/days",
+            "winnerCount": "integer",
+            "nominatorCount": "integer"
+          }
+        },
+        "return": "boolean"
+      },
+      "deleteElectionRules": {
+        "params": {
+          "rulesIDll": "integer"
+        },
+        "return": "boolean"
+      },
+
+      "listAdmins": {
+        "params": {
+          "rulesIDll": "integer"
+        },
+        "return": [{
+          "id": "integer/adminID",
+          "name": "string",
+          "adminLevel": "integer/adminLevelID",
+          "rules": [{
+            "id": "integer/rulesID",
+            "name": "string"
+          }],
+          "elections": [{
+            "id": "integer/electionID",
+            "name": "string"
+          }]
+        }]
+      },
+      "searchAdmins": {
+        "params": {
+          "namePart": "string",
+          "count": "integer"
+        },
+        "return": [{
+          "id": "integer/adminID",
+          "name": "string"
+        }]
+      },
+      "getAdmin": {
+        "params": {
+          "adminID": "integer"
+        },
+        "return": [{
+          "id": "integer/adminID",
+          "name": "string",
+          "adminLevel": "integer/adminLevelID",
+          "rules": [{
+            "id": "integer/rulesID",
+            "name": "string"
+          }],
+          "elections": [{
+            "id": "integer/electionID",
+            "name": "string"
+          }]
+        }]
+      },
+      "updateAdmin": {
+        "params": {
+          "adminID": "integer",
+          "adminLevel": "integer/adminLevelID",
+          "rules": [{
+            "id": "integer/rulesID",
+            "name": "string"
+          }],
+          "elections": [{
+            "id": "integer/electionID",
+            "name": "string"
+          }]
+        },
+        "return": "boolean"
+      },
+      "addAdminToRule": {
+        "params": {
+          "adminID": "integer",
+          "ruleID": "integer"
+        },
+        "return": "boolean"
+      },
+      "addAdminToElection": {
+        "params": {
+          "adminID": "integer",
+          "electionID": "integer"
+        },
+        "return": "boolean"
+      },
+      "removeAdminFromRule": {
+        "params": {
+          "adminID": "integer",
+          "ruleID": "integer"
+        },
+        "return": "boolean"
+      },
+      "removeAdminFromElection": {
+        "params": {
+          "adminID": "integer",
+          "electionID": "integer"
+        },
+        "return": "boolean"
+      },
+      "listRuleAdmins": {
+        "params": {
+          "ruleID": "integer"
+        },
+        "return": [{
+          "id": "integer/adminID",
+          "name": "string"
+        }]
+      },
+      "listElectionAdmins": {
+        "params": {
+          "electionID": "integer"
+        },
+        "return": [{
+          "id": "integer/adminID",
+          "name": "string"
+        }]
+      }
+    }
+  },
+
+
+  "ElectionVoteClass": {
+    "constructor": {
+      "db": "EnhancedPDO",
+      "user": "User",
+      "electionID": "integer"
+    },
+
+    "methods": {
+      "stand": {
+        "params": {
+          "fullName": "string",
+          "affiliation": "string",
+          "description": "string/HTML"
+        },
+        "return": "boolean"
+      },
+      "getNominees": {
+        "params": {
+          "fullName": "string"
+        },
+        "return": ["Candidate"]
+      },
+      "nominate": {
+        "params": {
+          "votingCohortID": "int"
+        },
+        "return": "boolean"
+      },
+      "getChoices": {
+        "params": "void",
+        "return": ["Candidate|ReferendumOption"]
+      },
+      "vote": {
+        "params": {
+          "vote": "Vote"
+        },
+        "return": "string/sha256"
+      },
+      "validateVote": {
+        "params": {
+          "hash": "string/sha256"
+        },
+        "return": "Vote"
+      },
+      "results": {
+        "params": "void",
+        "return": "Result"
+      }
+    }
+  },
+  "Candidate": {
+    "id": "integer",
+    "fullName": "string",
+    "affiliation": "string",
+    "description": "string/HTML",
+    "url": "string/URL"
+  },
+  "ReferendumOptions": {
+    "id": "integer",
+    "option": "string",
+    "description": "string/HTML",
+    "url": "string/URL"
+  },
+  "Vote": [{
+    "candidateID": "integer",
+    "rank": "integer"
+  }],
+  "Result": {
+    "winners": ["fullName"],
+    "totalVoters": "integer",
+    "totalVotes": "integer",
+    "returningOfficer": {
+      "fullName": "string",
+      "title": "string",
+      "contactForm": "string/URL"
+    },
+    "breakdown": {
+      "type": "string",
+      "data": "string/JSON"
+    }
+  }
+}

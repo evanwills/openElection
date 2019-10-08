@@ -1,0 +1,263 @@
+type ElectionBasic {
+  id: ID!,
+  name: String!,
+}
+
+type Election implements ElectionBasic {
+  id: ID!,
+  name: String!,
+  description: String
+  status: ElectionStatus!
+  rule: RuleBasic!
+  votingStart: DateTime
+  returningOfficer: ElectionOfficial!
+  contact: ElectionOfficial
+  closedComplete: Bool!
+  isReferendum: Bool!
+  candidates: [Candidate]!
+  emails: [Email]!
+  admins: [AdminBasic]!
+}
+
+type CandindateBasic implements SimplBasicUser {
+  id: ID!
+  fullName: String!
+}
+
+type Candidate implements CandindateBasic {
+  id: ID!
+  userID: String!
+  fullName: String!
+  email: String!
+  affiliation: String
+  campaignURL: String
+  photoURL: String
+}
+
+type ReferendumOptions {
+  id: ID!
+  option: String!
+  description: String!
+  extraInfoURL: String
+}
+
+type RuleBasic {
+  id: ID!
+  name: String!
+}
+
+type Rule implements RuleBasic {
+  id: ID!
+  name: String!
+  description: String
+  cohortFilter: String
+  countMethod: CountMethodBasic!
+  countMethodOptions: [KeyValuePair]!
+  durations: {
+    nomination: Int!
+    campaign: Int!
+    voting: Int!
+    results: Int!
+  }
+  winnerCount: Int!
+  nominatorCount: Int!
+  admins: [AdminBasic]!
+  elections: [ElectionBasic]!
+  created: Timestamp!
+  updated: Timestamp!
+  createdBy: Admin.id
+  updatedBy: Admin.id
+}
+
+
+type AdminBasic {
+  id: ID!
+  userID: String!
+}
+
+type Admin implements AdminBasic {
+  id: ID!
+  userID: String!
+  authLevel: AdminLevel!
+  rules: [RuleBasic]!
+  elections: [ElectionBasic]!
+}
+
+type CountMethodBasic {
+  id: ID!
+  name: String!
+}
+
+type CountMethod implements CountMethodBasic {
+  id: ID!
+  name: String!
+  officialName: String!
+  description: String
+  infoURL: String
+  options: [KeyValuePairOption]!
+  created: Timestamp!
+  updated: Timestamp!
+  createdBy: Admin.id
+  updatedBy: Admin.id
+}
+
+type KeyValuePair {
+  key: String!
+  value: String|Int|Date|DateTime|Bool!
+  dataType: DataType!
+  default: String|Int|Date|DateTime|Bool
+}
+
+type KeyValuePairOption implements KeyValuePair {
+  key: String!
+  value: String|Int|Date|DateTime|Bool!
+  dataType: DataType!
+  default: String|Int|Date|DateTime|Bool!
+}
+
+type SimplBasicUser {
+  id: ID!
+  fullName: String!
+}
+
+type BasicUser implements SimplBasicUser {
+  id: ID!
+  userID: String!
+  fullName: String!
+  email: String!
+}
+
+type ElectionOfficial implements BasicUser {
+  id: ID!
+  userID: String!
+  fullName: String!
+  email: String!
+  title: String!
+}
+
+type Email {
+  id: ID!
+  election: ElectionBasic!
+  type: EmailType!
+  subject: String!
+  from: ElectionOfficial.email!
+  body: String!
+  startSend: DateTime
+  sendEnd: DateTime
+  sendCount: Int!
+}
+
+type SentEmail {
+  emailID: Email.id!
+  sendTime: Timestamp!
+  type: EmailType!
+}
+
+type cohort {
+  voters: [Voter!]!
+  page: Int!
+  count: Int!
+}
+
+type Voter implements BasicUser {
+  id: ID!
+  election: ElectionBasic!
+  userID: String!
+  fullName: String!
+  email: String!
+  voted: Bool!
+  candidate: Bool!
+  nominator: Bool!
+  ballotChecksum: String
+  sentEmails: [SentEmail]!
+}
+
+type Ballot {
+  election: Election.id!
+  ballotPaper: [BallotPaperItem]!
+  hash: String!
+}
+
+type BallotPaperItem {
+  candidateID: Candindate.id!
+  rank: Int!
+}
+
+type Result {
+  election: ElectionBasic!
+  winners: [CandindateBasic!]!
+  details: [FirstPastResultDetails|BorderCountResultDetails|TwoPartyPreferredResultDetails]!
+  totalVoters: Int!
+  totalVotesCast: Int!
+}
+
+type FirstPastResultDetails {
+  candidate: CandindateBasic!
+  totalVotes: Int|Float!
+  rank: Int!
+}
+
+type BorderCountResultDetails {
+  candidate: CandindateBasic!
+  totalPoints: Int|Float!
+  rank: Int!
+  countForRank: [BoderCountForRank!]!
+}
+
+type TwoPartyPreferredResultDetails {
+  candidate: CandindateBasic!
+  totalVotes: Int|Float!
+  rank: Int!
+  countForRank: [TPPCountRound!]!
+}
+
+type BoderCountForRank {
+  position: Int!
+  count: Int!
+  positionValue: Float!
+  pointsForPosition: Float!
+}
+type TPPRound {
+  round: Int!
+  count: Int!
+  position: Int!
+  eliminated: Bool!
+}
+
+
+scalar Date
+scalar DateTime
+scalar Timestamp
+
+enum AdminLevel {
+  ADMIN
+  RULE ADMIN
+  ELECTION ADMIN
+  ELECTION RULE ADMIN
+  SUPER ADMIN
+}
+
+enum EmailType {
+  INVITE TO NOMINATE
+  REMINDER TO NOMINATE
+  INVITE TO VOTE
+  REMINDER TO VOTE
+  VIEW RESULTS
+}
+
+enum ElectionStatus {
+  PENDING
+  TAKING NOMINATIONS
+  CAMPAIGNING
+  VOTING
+  RESULTS
+  ARCHIVED
+}
+
+enum DataType {
+  STRING
+  INTEGER
+  DATE
+  DATETIME
+  BOOLEAN
+}

@@ -1,0 +1,111 @@
+{
+  "elections": [{
+    "id": "integer",
+    "name": "string",
+    "description": "string/HTML",
+    "ruleID": "integer",
+    "votingStartDate": "string/date-time",
+    "emails": {
+      "invitations": {
+        "nomination": "string/HTML",
+        "vote": "string/HTML"
+      },
+      "reminders": {
+        "nomination": "string/HTML",
+        "vote": "string/HTML"
+      },
+      "results": "string/HTML"
+    },
+    "returningOfficer": "string/ACUstaffID",
+    "closedComplete": "boolean",
+    "isReferendum": "boolean",
+    "created": "timestamp",
+    "updated": "timestamp",
+    "createdBy": "adminID",
+    "updatedBy": "adminID"
+  }],
+  "rules": [{
+    "id": "integer",
+    "name": "string",
+    "description": "string",
+    "cohortFilter": "string/json",
+    "countMethod": "integer/countMethodID",
+    "countMethodOptions": [{
+      "key": "string",
+      "value": "mixed"
+    }],
+    "nominationPeriod": "integer/days",
+    "campaignPeriod": "integer/days",
+    "votingPeriod": "integer/days",
+    "winnerCount": "integer",
+    "nominatorCount": "integer",
+    "created": "timestamp",
+    "updated": "timestamp",
+    "createdBy": "integer/adminID",
+    "updatedBy": "integer/adminID"
+  }],
+  "countMethod": [{
+    "id": "integer",
+    "name": "string",
+    "officialName": "string",
+    "description": "string",
+    "options": [{
+      "key": "string",
+      "defaultValue": "string, integer, boolean, float"
+    }],
+    "created": "timestamp",
+    "updated": "timestamp",
+    "createdBy": "adminID",
+    "updatedBy": "adminID"
+  }],
+  "votingCohort": [{
+    "id": "integer",
+    "electionID": "integer",
+    "userID": "string",
+    "firstName": "string",
+    "email": "string/email",
+    "hasVoted": "boolean",
+    "isCandidate": "boolean",
+    "hasNominatedOther": "boolean"
+  }],
+  "votes": [{
+    "electionID": "integer",
+    "castDateTime": "string/date-time",
+    "ballot": "string/json",
+    "hash": "string"
+  }],
+  "candidates": [{
+    "id": "integer",
+    "electionID": "integer",
+    "votingCohortID": "integer",
+    "fullName": "string",
+    "affiliation": "string",
+    "description": "string/HTML",
+    "url": "string/URL",
+    "nominated": "boolean"
+  }],
+  "referendumOptions": [{
+    "id": "integer",
+    "electionID": "integer",
+    "option": "string",
+    "description": "string/HTML",
+    "url": "string/URL"
+  }],
+  "admins": [{
+    "id": "integer",
+    "userID": "string",
+    "isSuper": "boolean"
+  }],
+  "JOIN_electionAdmins": [{
+    "electionID": "integer",
+    "adminID": "integer"
+  }],
+  "JOIN_adminRules": [{
+    "adminID": "integer",
+    "ruleID": "integer"
+  }],
+  "JOIN_candidateNominator": [{
+    "candidateID": "integer",
+    "votingCohortID": "integer"
+  }]
+}
