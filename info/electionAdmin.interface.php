@@ -10,7 +10,7 @@
  * @subpackage Administration
  * @author     Evan Wills <evan.i.wills@gmail.com>
  * @license    GPL2 https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
- * @link       https://github.com/evanwills/openelection
+ * @link       https://github.com/evanwills/openElection
  */
 
 declare(strict_types=1);

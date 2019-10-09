@@ -42,7 +42,7 @@
           }],
           "returningOfficer": "string/ACUstaffID",
           "closedComplete": "boolean",
-          "isReferendum": "boolean",
+          "status": "boolean",
           "created": "timestamp",
           "updated": "timestamp",
           "createdBy": "adminID",
