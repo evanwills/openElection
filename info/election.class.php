@@ -226,35 +226,186 @@ class Election
     {
         return 0;
     }
-    public function getRules() : ElectionRule;
-    public function getRulePart(string $part) : mixed;
-    public function getDate(string $eventName) : int;
-    public function getAllDates(string $filter) : array;
-    public function getIsReferendum() : bool;
-    public function getIsClosedComplete() : bool;
-    public function getIsNominating() : bool;
-    public function getIsCampaigning() : bool;
-    public function getIsVoting() : bool;
-    public function getIsCounted() : bool;
-    public function getReturningOfficer() : ElectionOfficial;
-    public function getContact() : ElectionOfficial;
 
+    /**
+     * Undocumented function
+     *
+     * @return ElectionRule
+     */
+    public function getRules() : ElectionRule
+    {
+        return new ElectionRule();
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param string $part part of Rule to be fetched
+     *
+     * @return mixed
+     */
+    public function getRulePart(string $part) : mixed
+    {
+        return new ElectionRule();
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param string $eventName the timestamp for when a particular
+     *                          election event happens
+     *                          * _nominating start_
+     *                          * _nominating end_
+     *                          * _campaigning start_
+     *                          * _campaigning end_
+     *                          * _voting start_
+     *                          * _voting end_
+     *                          * _archive_
+     *
+     * @return int
+     */
+    public function getDate(string $eventName) : int
+    {
+        return 0;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param string $filter which dates
+     *
+     * @return array
+     */
+    public function getAllDates(string $filter) : array
+    {
+        return array();
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return bool
+     */
+    public function getIsReferendum() : bool
+    {
+        return false;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return bool
+     */
+    public function getIsClosedComplete() : bool
+    {
+        return false;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return bool
+     */
+    public function getIsNominating() : bool
+    {
+        return false;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return bool
+     */
+    public function getIsCampaigning() : bool
+    {
+        return false;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return bool
+     */
+    public function getIsVoting() : bool
+    {
+        return false;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return bool
+     */
+    public function getIsCounted() : bool
+    {
+        return false;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return ElectionOfficial
+     */
+    public function getReturningOfficer() : ElectionOfficial
+    {
+        return new ElectionOfficial();
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return ElectionOfficial
+     */
+    public function getContact() : ElectionOfficial
+    {
+        return new ElectionOfficial();
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
     public function getChoices() : array
     {
         return array();
     }
+
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
     public function getChoiceCount() : array
     {
-        return 0;
+        return array();
     }
+
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
     public function getVoterCount() : array
     {
-        return 0;
+        return array();
     }
+
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
     public function getVoters(int $page = 1, int $count = 50) : array
     {
         return array();
     }
+
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
     public function getAdmins() : array
     {
         return array();
