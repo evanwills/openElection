@@ -97,9 +97,14 @@ type Candidate implements CandindateBasic {
 }
 
 type Cohort {
-  voters: [Voter!]!
-  page: Int!
-  count: Int!
+  cohortSource: CohortSource!
+  cohortFilter: [KeyValuePair!]!
+}
+
+type CohortSource {
+  name: String!,
+  description: String,
+  filterOptions: [KeyValuePairOption!]!
 }
 
 type CountMethodBasic {
@@ -131,6 +136,7 @@ type Election implements ElectionBasic {
   description: String
   status: ElectionStatus!
   rule: RuleBasic!
+  cohort: Cohort!
   votingStart: DateTime
   returningOfficer: ElectionOfficial!
   contact: ElectionOfficial
@@ -148,6 +154,12 @@ type ElectionOfficial implements BasicUser {
   title: String!
 }
 
+type Electorate {
+  voters: [Voter!]!
+  page: Int!
+  count: Int!
+}
+
 type Email {
   id: ID!
   election: ElectionBasic!
@@ -162,14 +174,13 @@ type Email {
 
 type KeyValuePair {
   key: String!
-  value: String|Int|Date|DateTime|Bool!
+  value: String|Int|Date|DateTime|Bool|[String]!
   dataType: DataType!
-  default: String|Int|Date|DateTime|Bool
 }
 
 type KeyValuePairOption implements KeyValuePair {
   key: String!
-  value: String|Int|Date|DateTime|Bool!
+  value: String|Int|Date|DateTime|Bool|[String]!
   dataType: DataType!
   default: String|Int|Date|DateTime|Bool!
 }
@@ -231,8 +242,6 @@ type Rule implements RuleBasic {
   id: ID!
   name: String!
   description: String
-  cohort: Cohort!
-  cohortFilter: String
   countMethod: CountMethodBasic!
   countMethodOptions: [KeyValuePair]!
   durations: {
