@@ -2,7 +2,13 @@
 
 `openElection` aims to provide a complete, flexible platform for managing elections and referenda.
 
-This project is based on lessons learned from maintaining the ACU's (Australian Catholic University) internal, home grown election system
+This project is based on lessons learned from maintaining the ACU's (Australian Catholic University) internal, home grown election system.
+
+## Definitions
+
+* __Electorate:__ A group of users who can vote in a given election
+* __Ballot paper:__ The vote cast by a single voter defining their choice/ranking of candidates in a given election (stored as a row in a database
+* __Ballot box:__ the complete list of all _ballot papers_ (votes cast) in a given election
 
 ## Features
 
@@ -11,7 +17,7 @@ This project is based on lessons learned from maintaining the ACU's (Australian 
 There are many steps for an election from working out who can vote to taking nominations and collecting votes to counting the votes. Most of these things are the same year in year out for every election. Many of them can be automated.
 
 1. Election admin creates the election/referendum defining
-   * the voting cohort,
+   * the _electorate_,
    * the count method,
    * the date voting starts and for how long votes will be accepted
   
@@ -19,7 +25,7 @@ There are many steps for an election from working out who can vote to taking nom
 
 2. Nominations open automatically as per configuration
 
-3. Emails are set to all voters inviting them to nominate (if required)
+3. Emails are sent to all voters inviting them to nominate (if required)
 
 4. Voters can nominate to stand for election via the system
 
@@ -47,7 +53,7 @@ There are many steps for an election from working out who can vote to taking nom
 
 17. Results are automatically posted when counting is complete
 
-18. Election/referendum is automatically as per configuration
+18. Election/referendum is archived automatically as per configuration
 
 ### Reusable election rule sets
 
@@ -102,4 +108,3 @@ But it supports adding others.
 ### Automated steps
 
 ### Data integrity & Vote validation
-
