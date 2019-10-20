@@ -97,9 +97,58 @@ Out of the box `openElection` comes with four count methods:
 
 But it supports adding others.
 
-### Email communications
+### Communications
+
+`openElection` will have the ability to manually and/or automatically send various notification emails or SMSs to voters, candidates and election officials.
+
+Emails/SMSs can be sent at predefined times or manually by the election admin.
+
+#### Always automatic communications
+
+* __To election officials only__
+  * When election has been created (Full election details, including
+    count method, dates, size of voting cohort and all other options)
+  * When nominations open
+  * When "Ballot box" is archived (instructions about how to restore
+    "Ballot box" if required.)
+  * When errors occur with something to do with the election
+* __To both election officials and candidates__
+  * When nominations close (List of all candidates)
+  * When voting opens (List of candidates and size of voting cohort)
+  * When when voting closes
+    (Number of votes received, size of voting cohort and calculated
+    percent of participation)
+  * When counting is complete
+    (List of winners and link to election results page)
+* __To candidates only__
+  * When candidacy has been received
+  * _(If required)_ When candidacy has been seconded
+  * _(If required)_ When endorcement has been received and confirmed
+  * Confirmation of eligability for candidacy
+
+#### Optional (automated or manual) communications to voters
+
+* When nominations open
+* Remider that nominations are open
+* When voting open
+* Remider (for those who have not yet voted) that voting is open but
+  will close soon
+* Results (for voters who have opted to receive them)
 
 ### Automated steps
+
+Because elections/referenda are highly structured they lend them
+selves nicely to automation.
+
+`openElection` will provide a "cron" system for automating
+election/referenum actions along with logging. This ensures that
+(provided election/referenum configuration is correct), that steps
+in the cycle occure at exactly the right time without human
+interaction.
+
+It also allows for things that can take a very long time (like
+building electorates, counting votes and sending emails) can happen
+at appropriate time.
 
 ### Data integrity & Vote validation
 

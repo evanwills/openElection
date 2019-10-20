@@ -1,9 +1,10 @@
 enum AdminLevel {
-  ADMIN
-  RULE ADMIN
-  ELECTION ADMIN
-  ELECTION RULE ADMIN
-  SUPER ADMIN
+  BASIC # basic admin - can view current and archived election results
+  OFFICIAL # election official - can update their details and trigger an election recount
+  ELECTION
+  RULE
+  SUPER
+  ROOT
 }
 
 enum DataType {
@@ -27,50 +28,110 @@ enum ElectionStatus {
   TAKING NOMINATIONS
   CAMPAIGNING
   VOTING
+  COUNTING
   RESULTS
   ARCHIVED
 }
 
+enum EndormentStatus {
+  REJECTED
+  NONE
+  REQUESTED
+  VARIFIED
+}
 
+enum VoterCandidateStatus {
+  DISQUALIFIED
+  CANNOT_STAND
+  ELIGIBLE
+  IS_STANDING
+  ELECTED
+}
+
+enum VoterStatus {
+  FORBIDDEN
+  ALLOWED
+  VOTED
+}
+
+enum ElectionLogType {
+  MESSAGE
+  NOTICE
+  WARNING
+  ERROR
+}
+
+enum ElectionLogTypeSub {
+  IMPORT
+  EMAIL
+  AUTHENTICATION
+  NOMINATION
+  VOTE
+  VALIDATION
+  COUNT
+}
+
+enum SystemLogType {
+  INSERT
+  UPDATE
+  DELETE
+}
+
+interface ElectionOption {
+  id: ID!
+  name: String!
+  description: Markdown!
+  extraInfoURL: URL
+
+}
+
+# ===============================================
 
 scalar Date
 scalar DateTime
 scalar Timestamp
+scalar URL
+scalar Email
+scalar Markdown
 
+# ===============================================
 
-
-type AdminBasic {
+type Admin {
   id: ID!
   userID: String!
-}
-
-type Admin implements AdminBasic {
-  id: ID!
-  userID: String!
+  cohortSource: CohortSource!
   authLevel: AdminLevel!
-  rules: [RuleBasic]!
-  elections: [ElectionBasic]!
+  positionTitle: String
+  rules: [Rule]!
+  elections: [Election]!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
 }
 
 type Ballot {
-  election: Election.id!
-  ballotPaper: [BallotPaperItem]!
+  election: Election!
+  ballotPaper: [BallotPaper]!
   hash: String!
 }
 
+type BallotPaper {
+  ballotElection: Election!
+  ballotPaper: [BallotPaperItem!]!
+  ballotChecksum: String!
+  ballotID: String
+}
+
 type BallotPaperItem {
-  candidateID: Candindate.id!
+  candidateID: ElectionOption!
   rank: Int!
 }
 
-type BasicUserSimple {
-  id: ID!
-  fullName: String!
-}
-
-type BasicUser implements BasicUserSimple {
+type BasicUser {
   id: ID!
   userID: String!
+  cohortSource: CohortSource
   fullName: String!
   email: String!
 }
@@ -80,78 +141,167 @@ type BasicUserSimple {
   fullName: String!
 }
 
-type CandindateBasic implements BasicUserSimple {
-  id: ID!
-  fullName: String!
+type BorderCountCandidate {
+  candidate: ElectionOption!
+  totalPoints: Float!
+  rank: Int!
+  countForRank: [BoderCountCandidateSub!]!
 }
 
-type Candidate implements CandindateBasic {
-  id: ID!
-  userID: String!
-  fullName: String!
-  email: String!
-  affiliation: String
-  campaignURL: String
-  photoURL: String
-  nominators: [BasicUserSimple]!
+type BoderCountCandidateSub {
+  position: Int!
+  count: Int!
+  positionValue: Float!
+  totalPointsForPosition: Float!
 }
 
-type Cohort {
+type Candidate {
+  id: ID!
+  name: Voter.fullName!
+  description: Markdown!
+  extraInfoURL: URL
+  photoURL: URL
+  endorsedBy: Party
+  created: DateTime!
+}
+
+type CandidateAll implements Candidate {
+  id: ID!
+  name: Voter.fullName!
+  description: Markdown!
+  extraInfoURL: URL
+  photoURL: URL
+  endorsedBy: Party
+  endorsedByStatus: EndormentStatus!
+  nominators: [Voter]!
+  created: DateTime!
+  updated: DateTime!
+  updatedBy: Admin!
+}
+
+type changeLog {
+  id: ID!
+  time: Timestamp!
+  changeBy: Admin
+  action: SystemLogType!
+  changeTable: String!
+  diff: String!
+}
+
+type CohortFilter {
+  id: ID!
   cohortSource: CohortSource!
-  cohortFilter: [KeyValuePair!]!
+  parameters: [KeyValuePair!]!
+  enabled: Boolean!
+  description: String!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
 }
 
 type CohortSource {
-  name: String!,
-  description: String,
-  filterOptions: [KeyValuePairOption!]!
-}
-
-type CountMethodBasic {
   id: ID!
-  name: String!
+  name: String!,
+  description: String!
+  enabled: Boolean!
+  availableParameters: [KeyValuePairOption!]!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
 }
 
-type CountMethod implements CountMethodBasic {
+type CountMethod {
   id: ID!
   name: String!
   officialName: String!
   description: String
   infoURL: String
   options: [KeyValuePairOption]!
-  created: Timestamp!
-  updated: Timestamp!
-  createdBy: Admin.id
-  updatedBy: Admin.id
+  enabled: Boolean!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
 }
 
-type ElectionBasic {
+type Election {
   id: ID!,
   name: String!,
-}
-
-type Election implements ElectionBasic {
-  id: ID!,
-  name: String!,
-  description: String
+  description: Markdown!
   status: ElectionStatus!
-  rule: RuleBasic!
+  dates: {
+    nominationsOpen: DateTime
+    nominationsClose: DateTime
+    votingOpen: DateTime!
+    votingClose: DateTime!
+    counting: DateTime!
+  }
+  year: Int!
+  url: URL!
+  rule: Rule!
   cohort: Cohort!
-  votingStart: DateTime
+  isReferendum: Bool!
   returningOfficer: ElectionOfficial!
   contact: ElectionOfficial
   isReferendum: Bool!
   candidates: [Candidate]!
+}
+
+type ElectionFull implements Election {
+  id: ID!,
+  name: String!,
+  description: String
+  status: ElectionStatus!
+  rule: Rule!
+  cohort: Cohort!
+  dates: {
+    nominationsOpen: DateTime
+    nominationsClose: DateTime
+    votingOpen: DateTime!
+    votingClose: DateTime!
+    counting: DateTime!
+    archive: DateTime!
+  }
+  returningOfficer: ElectionOfficial!
+  contact: ElectionOfficial
+  isPublic: Bool!
+  candidates: [Candidate]!
   emails: [Email]!
-  admins: [AdminBasic]!
+  admins: [Admin]!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
+}
+
+type ElectionLog {
+  id: ID!
+  time: Timestamp!
+  election: Election!
+  type: ElectionLogType!
+  subType: ElectionLogTypeSub!
+  code: Int!
+  message: String!
 }
 
 type ElectionOfficial implements BasicUser {
   id: ID!
+  fullName: String!
+  positionTitle: String!
+}
+
+type ElectionOfficialAll implements ElectionOfficial {
+  id: ID!
   userID: String!
   fullName: String!
   email: String!
-  title: String!
+  positionTitle: String!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
 }
 
 type Electorate {
@@ -162,14 +312,25 @@ type Electorate {
 
 type Email {
   id: ID!
-  election: ElectionBasic!
+  election: Election!
   type: EmailType!
   subject: String!
   from: ElectionOfficial.email!
   body: String!
+  isTemplate: Boolean!
   startSend: DateTime
   sendEnd: DateTime
   sendCount: Int!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
+}
+
+type FirstPastCandidate {
+  candidate: ElectionOption!
+  totalVotes: Int!
+  rank: Int!
 }
 
 type KeyValuePair {
@@ -185,64 +346,69 @@ type KeyValuePairOption implements KeyValuePair {
   default: String|Int|Date|DateTime|Bool!
 }
 
-type ReferendumOptions {
+type Party {
   id: ID!
-  option: String!
-  description: String!
-  extraInfoURL: String
+  name: String!
+  url: URL!
+}
+
+type PartyFull implements Party {
+  id: ID!
+  name: String!
+  url: URL!
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
+}
+
+type ReferendumOption implements ElectionOption {
+  id: ID!
+  name: String!
+  description: Markdown!
+  extraInfoURL: URL
+}
+
+type ReferendumOptionFull implements ReferendumOption {
+  id: ID!
+  name: String!
+  description: Markdown!
+  extraInfoURL: URL
+  created: DateTime!
+  createdBy: Admin!
+  updated: DateTime!
+  updatedBy: Admin!
 }
 
 type Result {
-  election: ElectionBasic!
-  winners: [CandindateBasic!]!
-  details: ResultDetails[FirstPast|ResultDetailsBorderCount|ResultDetailsTwoPartyPreferred]!
+  election: Election!
+  winners: [Candindate!]!
+  details: CountMethodResultDetails!
   totalVoters: Int!
   totalVotesCast: Int!
 }
 
-type ResultDetailsFirstPast {
-  candidate: CandindateBasic!
-  totalVotes: Int|Float!
-  rank: Int!
+type CountMethodResultDetails {
+  # see countMethod.graphql
+  countType: String!
+  results: [
+    # see countMethod.graphql
+  ]
 }
 
-type ResultDetailsBorderCount {
-  candidate: CandindateBasic!
-  totalPoints: Int|Float!
-  rank: Int!
-  countForRank: [ResultDetailsSubBoderCountForRank!]!
+type ResultDetailsMultiRound {
+  options: [MultiRound!]
 }
 
-type ResultDetailsTwoPartyPreferred {
-  candidate: CandindateBasic!
-  totalVotes: Int|Float!
-  rank: Int!
-  countForRank: [ResultDetailsSubTPPRound!]!
+type ResultDetailsSingleRound {
+  options: [SingleRound!]
 }
 
-type ResultDetailsSubBoderCountForRank {
-  position: Int!
-  count: Int!
-  positionValue: Float!
-  pointsForPosition: Float!
-}
-type ResultDetailsSubTPPRound {
-  round: Int!
-  count: Int!
-  position: Int!
-  eliminated: Bool!
-}
-
-type RuleBasic {
-  id: ID!
-  name: String!
-}
-
-type Rule implements RuleBasic {
+type Rule {
   id: ID!
   name: String!
   description: String
-  countMethod: CountMethodBasic!
+  countMethod: CountMethod!
   countMethodOptions: [KeyValuePair]!
   durations: {
     nomination: Int!
@@ -252,13 +418,31 @@ type Rule implements RuleBasic {
   }
   winnerCount: Int!
   nominatorCount: Int!
-  admins: [AdminBasic]!
-  elections: [ElectionBasic]!
+}
+
+type RuleAll implements Rule {
+  id: ID!
+  name: String!
+  description: String
+  countMethod: CountMethod!
+  countMethodOptions: [KeyValuePair]!
+  durations: {
+    nomination: Int!
+    campaign: Int!
+    voting: Int!
+    results: Int!
+  }
+  winnerCount: Int!
+  nominatorCount: Int!
+  admins: [Admin]!
+  elections: [Election]!
   created: Timestamp!
   updated: Timestamp!
   createdBy: Admin.id
   updatedBy: Admin.id
 }
+
+
 
 type SentEmail {
   emailID: Email.id!
@@ -266,17 +450,38 @@ type SentEmail {
   type: EmailType!
 }
 
+type TwoCandidatePreferred {
+  round: [TwoCandidatePreferredRound!]
+}
+
+type TwoCandidatePreferredRound {
+  candidates: [TwoCanidatePreferredCandidate!]
+}
+
+type TwoCanidatePreferredCandidate {
+  round: Int!
+  totalCount: Int!
+  position: Int!
+  eliminated: Bool!
+}
+
 type Voter implements BasicUser {
   id: ID!
-  election: ElectionBasic!
+  election: Election!
   userID: String!
   fullName: String!
   email: String!
   voted: Bool!
-  candidate: Bool!
+  voterStatus: VoterStatus!
+  candidateStatus: VoterCandidateStatus!
   nominator: Bool!
   ballotChecksum: String
   sentEmails: [SentEmail]!
 }
+# ===============================================
 
+union ElectionOption: ReferendumOption | Candidate
 
+union MultiRound: TwoCandidatePreferred
+
+union SingleRound: FirstPastCandidate|BorderCountCandidate
