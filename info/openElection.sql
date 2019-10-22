@@ -211,7 +211,7 @@ CREATE TABLE `enumCandidateStatus` (
 
 CREATE TABLE `enumChangeAction` (
   `enumChangeActionID` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `enumChangeActionName` varchar(8) NOT NULL,
+  `enumChangeActionName` varchar(22) NOT NULL,
   PRIMARY KEY (`enumChangeActionID`),
   UNIQUE `U_enumChangeActionName` (`enumChangeActionName`)
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8;
@@ -271,7 +271,7 @@ CREATE TABLE `enumLogTypeSub` (
 
 CREATE TABLE `enumPollStatus` (
   `enumPollStatusID` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `enumPollStatusName` varchar(12) NOT NULL,
+  `enumPollStatusName` varchar(24) NOT NULL,
   PRIMARY KEY (`enumPollStatusID`),
   UNIQUE `U_enumPollStatusName` (`enumPollStatusName`)
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8;
@@ -511,8 +511,8 @@ CREATE TABLE `poll` (
   `pollDateArchive` datetime DEFAULT NULL,
   `pollDateNominationsOpen` datetime DEFAULT NULL,
   `pollDateNominationsClose` datetime DEFAULT NULL,
-  `pollReturningOfficerID` int(10) UNSIGNED NOT NULL,
-  `pollContactOfficerID` int(10) UNSIGNED NOT NULL,
+  `pollReturningOfficerID` smallint(5) UNSIGNED NOT NULL,
+  `pollContactOfficerID` smallint(5) UNSIGNED NOT NULL,
   `pollIsPublic` tinyint(1) NOT NULL DEFAULT 1,
   `pollIsReferendum` tinyint(1) NOT NULL DEFAULT 0,
   `pollCreated` datetime NOT NULL DEFAULT current_timestamp(),
@@ -709,14 +709,17 @@ ALTER TABLE `logPoll`
 ALTER TABLE `poll`
   ADD CONSTRAINT `poll_ibfk_1` FOREIGN KEY (`pollStatusID`) REFERENCES `enumPollStatus` (`enumPollStatusID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `poll_ibfk_2` FOREIGN KEY (`pollRuleID`) REFERENCES `rules` (`ruleID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `poll_ibfk_3` FOREIGN KEY (`pollCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `poll_ibfk_4` FOREIGN KEY (`pollUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `poll_ibfk_3` FOREIGN KEY (`pollReturningOfficerID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `poll_ibfk_4` FOREIGN KEY (`pollContactOfficerID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `poll_ibfk_5` FOREIGN KEY (`pollCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `poll_ibfk_6` FOREIGN KEY (`pollUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `results`
 --
 ALTER TABLE `resultsCache`
-  ADD CONSTRAINT `resultsCache_ibfk_1` FOREIGN KEY (`resultsPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `resultsCache_ibfk_1` FOREIGN KEY (`resultsPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `resultsCache_ibfk_2` FOREIGN KEY (`resultsSuperseedsResultID`) REFERENCES `resultsCache` (`resultID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `rules`
@@ -733,9 +736,9 @@ INSERT INTO `enumAdminLevel` (`enumAdminLevelID`, `enumAdminLevelName`) VALUES
 (1, 'basic'),
 (2, 'official'),
 (3, 'poll'),
-(6, 'root'),
 (4, 'rule'),
-(5, 'super');
+(5, 'super'),
+(6, 'root');
 
 -- --------------------------------------------------------
 
@@ -756,6 +759,7 @@ INSERT INTO `enumChangeAction` (`enumChangeActionID`, `enumChangeActionName`) VA
 -- --------------------------------------------------------
 
 INSERT INTO `enumEmailType` (`enumEmailTypeID`, `enumEmailTypeName`) VALUES
+(0, 'custom'),
 (1, 'call for nominations'),
 (2, 'nominations open'),
 (3, 'nominations remider'),
@@ -775,17 +779,6 @@ INSERT INTO `enumEndorsementStatus` (`enumEndorsementStatusID`, `enumEndorsement
 
 -- --------------------------------------------------------
 
-INSERT INTO `enumPollStatus` (`enumPollStatusID`, `enumPollStatusName`) VALUES
-(1, 'pending'),
-(2, 'accepting nominations'),
-(3, 'campaigning'),
-(4, 'voting'),
-(5, 'counting'),
-(6, 'results'),
-(7, 'archived');
-
--- --------------------------------------------------------
-
 INSERT INTO `enumLogType` (`enumLogTypeID`, `enumLogTypeName`) VALUES
 (1, 'message'),
 (2, 'notice'),
@@ -802,6 +795,17 @@ INSERT INTO `enumLogTypeSub` (`enumLogTypeSubID`, `enumLogTypeSubName`) VALUES
 (5, 'vote'),
 (6, 'validation'),
 (7, 'count');
+
+-- --------------------------------------------------------
+
+INSERT INTO `enumPollStatus` (`enumPollStatusID`, `enumPollStatusName`) VALUES
+(1, 'pending'),
+(2, 'accepting nominations'),
+(3, 'campaigning'),
+(4, 'voting'),
+(5, 'counting'),
+(6, 'results'),
+(7, 'archived');
 
 -- --------------------------------------------------------
 
