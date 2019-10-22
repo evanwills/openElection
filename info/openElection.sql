@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 21, 2019 at 10:40 AM
+-- Generation Time: Oct 22, 2019 at 06:58 AM
 -- Server version: 10.3.18-MariaDB-1
 -- PHP Version: 7.3.9-1
 
@@ -17,21 +17,39 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `openElection`
+-- Database: `openPoll`
 --
 
+-- --------------------------------------------------------
+DROP TABLE IF EXISTS `logPoll`;
+DROP TABLE IF EXISTS `logChanges`;
+DROP TABLE IF EXISTS `joinRuleAdmin`;
+DROP TABLE IF EXISTS `joinEmailVoter`;
+DROP TABLE IF EXISTS `joinPollAdmin`;
+DROP TABLE IF EXISTS `joinPollCohortFilter`;
+DROP TABLE IF EXISTS `resultsCache`;
+DROP TABLE IF EXISTS `ballotBox`;
+DROP TABLE IF EXISTS `candidate`;
+DROP TABLE IF EXISTS `party`;
+DROP TABLE IF EXISTS `electorate`;
+DROP TABLE IF EXISTS `email`;
+DROP TABLE IF EXISTS `poll`;
+DROP TABLE IF EXISTS `rules`;
+DROP TABLE IF EXISTS `countMethod`;
+DROP TABLE IF EXISTS `cohortFilter`;
+DROP TABLE IF EXISTS `admin`;
+DROP TABLE IF EXISTS `cohortSources`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `adminID` smallint(5) UNSIGNED NOT NULL,
   `adminUserID` varchar(128) NOT NULL,
   `adminCohortSourceID` smallint(5) UNSIGNED NOT NULL,
-  `adminLevel` enum('basic','official','election','rule','super','root') NOT NULL DEFAULT 'basic',
+  `adminLevel` enum('basic','official','poll','rule','super','root') NOT NULL DEFAULT 'basic',
   `adminCreated` datetime NOT NULL DEFAULT current_timestamp(),
   `adminCreatedByAdminID` smallint(5) UNSIGNED NOT NULL,
   `adminUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -44,9 +62,8 @@ CREATE TABLE `admin` (
 -- Table structure for table `ballotBox`
 --
 
-DROP TABLE IF EXISTS `ballotBox`;
 CREATE TABLE `ballotBox` (
-  `ballotElectionID` int(10) UNSIGNED NOT NULL,
+  `ballotPollID` int(10) UNSIGNED NOT NULL,
   `ballotID` char(40) NOT NULL,
   `ballotPaper` text NOT NULL,
   `ballotChecksum` char(40) NOT NULL
@@ -58,10 +75,9 @@ CREATE TABLE `ballotBox` (
 -- Table structure for table `candidate`
 --
 
-DROP TABLE IF EXISTS `candidate`;
 CREATE TABLE `candidate` (
   `candidateID` smallint(5) UNSIGNED NOT NULL,
-  `candidateElectionID` int(10) UNSIGNED NOT NULL,
+  `candidatePollID` int(10) UNSIGNED NOT NULL,
   `candidateVoterID` int(10) UNSIGNED NOT NULL,
   `candidateCampaignURL` text NOT NULL,
   `candidateStatement` text NOT NULL,
@@ -79,7 +95,6 @@ CREATE TABLE `candidate` (
 -- Table structure for table `cohortFilter`
 --
 
-DROP TABLE IF EXISTS `cohortFilter`;
 CREATE TABLE `cohortFilter` (
   `cohortFilterID` smallint(5) UNSIGNED NOT NULL,
   `cohortFilterName` varchar(128) NOT NULL,
@@ -99,7 +114,6 @@ CREATE TABLE `cohortFilter` (
 -- Table structure for table `cohortSources`
 --
 
-DROP TABLE IF EXISTS `cohortSources`;
 CREATE TABLE `cohortSources` (
   `cohortSourceID` smallint(5) UNSIGNED NOT NULL,
   `cohortSourceName` varchar(64) NOT NULL,
@@ -114,7 +128,6 @@ CREATE TABLE `cohortSources` (
 -- Table structure for table `countMethod`
 --
 
-DROP TABLE IF EXISTS `countMethod`;
 CREATE TABLE `countMethod` (
   `countMethodID` smallint(5) UNSIGNED NOT NULL,
   `countMethodName` varchar(64) NOT NULL,
@@ -131,32 +144,31 @@ CREATE TABLE `countMethod` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `election`
+-- Table structure for table `poll`
 --
 
-DROP TABLE IF EXISTS `election`;
-CREATE TABLE `election` (
-  `electionID` int(10) UNSIGNED NOT NULL,
-  `electionName` varchar(128) NOT NULL COMMENT 'Title of the election',
-  `electionYear` smallint(5) UNSIGNED NOT NULL COMMENT 'parent path in URL',
-  `electionURL` varchar(32) NOT NULL COMMENT 'URL path for accessing the election',
-  `electionDescription` text NOT NULL,
-  `electionStatus` enum('pending','accepting nominations','campaigning','voting','counting','results','archived') NOT NULL,
-  `electionCohortFilterID` smallint(5) UNSIGNED NOT NULL,
-  `electionRuleID` smallint(5) UNSIGNED NOT NULL,
-  `electionDateVotingStart` datetime NOT NULL,
-  `electionDateVotingClose` datetime DEFAULT NULL,
-  `electionDateArchive` datetime DEFAULT NULL,
-  `electionDateNominationsOpen` datetime DEFAULT NULL,
-  `electionDateNominationsClose` datetime DEFAULT NULL,
-  `electionReturningOfficerID` int(10) UNSIGNED NOT NULL,
-  `electionContactOfficerID` int(10) UNSIGNED NOT NULL,
-  `electionIsPublic` tinyint(1) NOT NULL DEFAULT 1,
-  `electionIsReferendum` tinyint(1) NOT NULL DEFAULT 0,
-  `electionCreated` datetime NOT NULL DEFAULT current_timestamp(),
-  `electionCreatedBy` smallint(5) UNSIGNED NOT NULL,
-  `electionUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `electionUpdatedByID` smallint(5) UNSIGNED NOT NULL
+CREATE TABLE `poll` (
+  `pollID` int(10) UNSIGNED NOT NULL,
+  `pollName` varchar(128) NOT NULL COMMENT 'Title of the poll',
+  `pollYear` smallint(5) UNSIGNED NOT NULL COMMENT 'parent path in URL',
+  `pollURL` varchar(32) NOT NULL COMMENT 'URL path for accessing the poll',
+  `pollDescription` text NOT NULL,
+  `pollStatus` enum('pending','accepting nominations','campaigning','voting','counting','results','archived') NOT NULL,
+  `pollCohortFilterID` smallint(5) UNSIGNED NOT NULL,
+  `pollRuleID` smallint(5) UNSIGNED NOT NULL,
+  `pollDateVotingStart` datetime NOT NULL,
+  `pollDateVotingClose` datetime DEFAULT NULL,
+  `pollDateArchive` datetime DEFAULT NULL,
+  `pollDateNominationsOpen` datetime DEFAULT NULL,
+  `pollDateNominationsClose` datetime DEFAULT NULL,
+  `pollReturningOfficerID` int(10) UNSIGNED NOT NULL,
+  `pollContactOfficerID` int(10) UNSIGNED NOT NULL,
+  `pollIsPublic` tinyint(1) NOT NULL DEFAULT 1,
+  `pollIsReferendum` tinyint(1) NOT NULL DEFAULT 0,
+  `pollCreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `pollCreatedBy` smallint(5) UNSIGNED NOT NULL,
+  `pollUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `pollUpdatedByID` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -165,16 +177,15 @@ CREATE TABLE `election` (
 -- Table structure for table `electorate`
 --
 
-DROP TABLE IF EXISTS `electorate`;
 CREATE TABLE `electorate` (
   `voterID` int(10) UNSIGNED NOT NULL,
-  `voterElectionID` int(10) UNSIGNED NOT NULL,
+  `voterPollID` int(10) UNSIGNED NOT NULL,
   `voterUserID` varchar(128) NOT NULL,
   `voterCohortSourceID` smallint(5) UNSIGNED NOT NULL,
   `voterFullName` varchar(128) NOT NULL,
   `voterEmail` varchar(255) NOT NULL,
   `voterStatus` enum('forbidden','allowed','voted') NOT NULL DEFAULT 'allowed',
-  `voterCandidateStatus` enum('Disqualified','Cannot stand','Eligible','Is standing','Elected') NOT NULL,
+  `voterCandidateStatus` enum('disqualified','cannot stand','eligible','is standing','elected') NOT NULL,
   `voterBallotPaperCheckSum` char(40) NOT NULL,
   `voterCreated` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -185,10 +196,9 @@ CREATE TABLE `electorate` (
 -- Table structure for table `email`
 --
 
-DROP TABLE IF EXISTS `email`;
 CREATE TABLE `email` (
   `emailID` int(10) UNSIGNED NOT NULL,
-  `emailElectionID` int(10) UNSIGNED NOT NULL,
+  `emailPollID` int(10) UNSIGNED NOT NULL,
   `emailType` enum('call for nominations','nominations open','nominations remider','nominations closed','voting open','voting reminder','voting closed','results') NOT NULL,
   `emailIsTemplate` tinyint(1) NOT NULL DEFAULT 0,
   `emailSubject` varchar(255) NOT NULL,
@@ -207,18 +217,32 @@ CREATE TABLE `email` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `joinElectionAdmin`
+-- Table structure for table `joinPollAdmin`
 --
 
-DROP TABLE IF EXISTS `joinElectionAdmin`;
-CREATE TABLE `joinElectionAdmin` (
-  `joinElectionAdminElectionID` int(10) UNSIGNED NOT NULL,
-  `joinElectionAdminAdminID` smallint(5) UNSIGNED NOT NULL,
-  `joinElectionAdminEnabled` tinyint(1) NOT NULL DEFAULT 1,
-  `joinElectionAdminCreated` datetime NOT NULL DEFAULT current_timestamp(),
-  `joinElectionAdminCreatedByAdminID` smallint(5) UNSIGNED NOT NULL,
-  `joinElectionAdminUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `joinElectionAdminUpdatedByAdminID` smallint(5) UNSIGNED NOT NULL
+CREATE TABLE `joinPollAdmin` (
+  `joinPollAdminPollID` int(10) UNSIGNED NOT NULL,
+  `joinPollAdminAdminID` smallint(5) UNSIGNED NOT NULL,
+  `joinPollAdminEnabled` tinyint(1) NOT NULL DEFAULT 1,
+  `joinPollAdminCreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `joinPollAdminCreatedByAdminID` smallint(5) UNSIGNED NOT NULL,
+  `joinPollAdminUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `joinPollAdminUpdatedByAdminID` smallint(5) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `joinPollCohortFilter`
+--
+
+CREATE TABLE `joinPollCohortFilter` (
+  `joinPollCohortFilterPollID` int(10) UNSIGNED NOT NULL,
+  `joinPollCohortFilterCohortFilterID` smallint(5) UNSIGNED NOT NULL,
+  `joinPollCohortFilterCreated` datetime NOT NULL DEFAULT current_timestamp(),
+  `joinPollCohortFilterCreatedByAdminID` smallint(5) UNSIGNED NOT NULL,
+  `joinPollCohortFilterUpdated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `joinPollCohortFilterUpdatedByAdminID` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -227,10 +251,9 @@ CREATE TABLE `joinElectionAdmin` (
 -- Table structure for table `joinEmailVoter`
 --
 
-DROP TABLE IF EXISTS `joinEmailVoter`;
 CREATE TABLE `joinEmailVoter` (
-  `joinEmailVoterEmailID` int(10) UNSIGNED NOT NULL,
   `joinEmailVoterVoterID` int(10) UNSIGNED NOT NULL,
+  `joinEmailVoterEmailID` int(10) UNSIGNED NOT NULL,
   `joinEmailVoterSendTime` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -240,7 +263,6 @@ CREATE TABLE `joinEmailVoter` (
 -- Table structure for table `joinRuleAdmin`
 --
 
-DROP TABLE IF EXISTS `joinRuleAdmin`;
 CREATE TABLE `joinRuleAdmin` (
   `joinRuleAdminRuleID` smallint(5) UNSIGNED NOT NULL,
   `joinRuleAdminAdminID` smallint(5) UNSIGNED NOT NULL,
@@ -257,7 +279,6 @@ CREATE TABLE `joinRuleAdmin` (
 -- Table structure for table `logChanges`
 --
 
-DROP TABLE IF EXISTS `logChanges`;
 CREATE TABLE `logChanges` (
   `changeTime` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `changeByAdminID` smallint(5) UNSIGNED NOT NULL,
@@ -269,14 +290,13 @@ CREATE TABLE `logChanges` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logElection`
+-- Table structure for table `logPoll`
 --
 
-DROP TABLE IF EXISTS `logElection`;
-CREATE TABLE `logElection` (
+CREATE TABLE `logPoll` (
   `logID` int(10) UNSIGNED NOT NULL,
   `logTime` timestamp NOT NULL DEFAULT current_timestamp(),
-  `logElectionID` int(10) UNSIGNED NOT NULL,
+  `logPollID` int(10) UNSIGNED NOT NULL,
   `logType` enum('message','notice','warning','error') NOT NULL,
   `logTypeSub` enum('import','email','authentication','nomination','vote','validation','count') NOT NULL,
   `logCode` smallint(5) UNSIGNED NOT NULL,
@@ -289,7 +309,6 @@ CREATE TABLE `logElection` (
 -- Table structure for table `party`
 --
 
-DROP TABLE IF EXISTS `party`;
 CREATE TABLE `party` (
   `partyID` smallint(5) UNSIGNED NOT NULL,
   `partyName` varchar(32) NOT NULL,
@@ -302,10 +321,9 @@ CREATE TABLE `party` (
 -- Table structure for table `results`
 --
 
-DROP TABLE IF EXISTS `results`;
 CREATE TABLE `results` (
   `resultID` int(10) UNSIGNED NOT NULL,
-  `resultsElectionID` int(10) UNSIGNED NOT NULL,
+  `resultsPollID` int(10) UNSIGNED NOT NULL,
   `resultsTotalVoters` int(10) UNSIGNED NOT NULL,
   `resultsTotalVotesCast` int(10) UNSIGNED NOT NULL,
   `resultsCounted` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -317,28 +335,9 @@ CREATE TABLE `results` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `resultsCash`
---
-
-DROP TABLE IF EXISTS `resultsCash`;
-CREATE TABLE `resultsCash` (
-  `resultID` int(10) UNSIGNED NOT NULL,
-  `resultsElectionID` int(10) UNSIGNED NOT NULL,
-  `resultsTotalVoters` int(10) UNSIGNED NOT NULL,
-  `resultsTotalVotesCast` int(10) UNSIGNED NOT NULL,
-  `resultsCounted` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `resultsSuperseedsResultID` int(10) UNSIGNED DEFAULT NULL,
-  `resultsWinners` text NOT NULL,
-  `resultsDetails` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `rules`
 --
 
-DROP TABLE IF EXISTS `rules`;
 CREATE TABLE `rules` (
   `ruleID` smallint(5) UNSIGNED NOT NULL,
   `ruleName` varchar(128) NOT NULL,
@@ -380,20 +379,20 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `ballotBox`
   ADD UNIQUE KEY `U_ballotID` (`ballotID`),
-  ADD KEY `I_ballotElectionID` (`ballotElectionID`);
+  ADD KEY `I_ballotPollID` (`ballotPollID`);
 
 --
 -- Indexes for table `candidate`
 --
 ALTER TABLE `candidate`
   ADD PRIMARY KEY (`candidateID`),
-  ADD UNIQUE KEY `candidateID` (`candidateID`,`candidateElectionID`),
-  ADD KEY `I_candidatevoterElectionID` (`candidateElectionID`),
+  ADD UNIQUE KEY `candidateID` (`candidateID`,`candidatePollID`),
+  ADD KEY `I_candidatevoterPollID` (`candidatePollID`),
   ADD KEY `I_candidateVoterID` (`candidateVoterID`),
   ADD KEY `I_candidateEndorsedByPartyID` (`candidateEndorsedByPartyID`),
   ADD KEY `I_candidateEndorsementStatus` (`candidateEndorsementStatus`),
   ADD KEY `I_candidateUpdatedByAdminID` (`candidateUpdatedByAdminID`),
-  ADD KEY `I_electionParty` (`candidateElectionID`,`candidateEndorsedByPartyID`,`candidateEndorsementStatus`);
+  ADD KEY `I_pollParty` (`candidatePollID`,`candidateEndorsedByPartyID`,`candidateEndorsementStatus`);
 
 --
 -- Indexes for table `cohortFilter`
@@ -425,44 +424,44 @@ ALTER TABLE `countMethod`
   ADD KEY `I_countMethodEnabled` (`countMethodEnabled`);
 
 --
--- Indexes for table `election`
+-- Indexes for table `poll`
 --
-ALTER TABLE `election`
-  ADD PRIMARY KEY (`electionID`),
-  ADD UNIQUE KEY `U_electionURL` (`electionYear`,`electionURL`) USING BTREE,
-  ADD UNIQUE KEY `U_electionName` (`electionName`,`electionYear`) USING BTREE,
-  ADD KEY `I_electionCohortFilterID` (`electionCohortFilterID`),
-  ADD KEY `I_electionRuleID` (`electionRuleID`),
-  ADD KEY `I_electionReturningOfficerID` (`electionReturningOfficerID`),
-  ADD KEY `I_electionContactOfficerID` (`electionContactOfficerID`),
-  ADD KEY `I_electionIsPublic` (`electionIsPublic`),
-  ADD KEY `I_electionIsReferendum` (`electionIsReferendum`),
-  ADD KEY `I_electionCreatedByID` (`electionCreatedBy`),
-  ADD KEY `I_electionUpdatedByID` (`electionUpdatedByID`),
-  ADD KEY `I_electionStatus` (`electionStatus`) USING BTREE,
-  ADD KEY `I_electionYear` (`electionYear`);
+ALTER TABLE `poll`
+  ADD PRIMARY KEY (`pollID`),
+  ADD UNIQUE KEY `U_pollURL` (`pollYear`,`pollURL`) USING BTREE,
+  ADD UNIQUE KEY `U_pollName` (`pollName`,`pollYear`) USING BTREE,
+  ADD KEY `I_pollCohortFilterID` (`pollCohortFilterID`),
+  ADD KEY `I_pollRuleID` (`pollRuleID`),
+  ADD KEY `I_pollReturningOfficerID` (`pollReturningOfficerID`),
+  ADD KEY `I_pollContactOfficerID` (`pollContactOfficerID`),
+  ADD KEY `I_pollIsPublic` (`pollIsPublic`),
+  ADD KEY `I_pollIsReferendum` (`pollIsReferendum`),
+  ADD KEY `I_pollCreatedByID` (`pollCreatedBy`),
+  ADD KEY `I_pollUpdatedByID` (`pollUpdatedByID`),
+  ADD KEY `I_pollStatus` (`pollStatus`) USING BTREE,
+  ADD KEY `I_pollYear` (`pollYear`);
 
 --
 -- Indexes for table `electorate`
 --
 ALTER TABLE `electorate`
   ADD PRIMARY KEY (`voterID`),
-  ADD UNIQUE KEY `U_voterIsUnique` (`voterElectionID`,`voterUserID`,`voterCohortSourceID`),
-  ADD UNIQUE KEY `U_voterCandiateStatus` (`voterElectionID`,`voterUserID`,`voterCohortSourceID`,`voterCandidateStatus`),
-  ADD KEY `I_voterElectionID` (`voterElectionID`),
+  ADD UNIQUE KEY `U_voterIsUnique` (`voterPollID`,`voterUserID`,`voterCohortSourceID`),
+  ADD UNIQUE KEY `U_voterCandiateStatus` (`voterPollID`,`voterUserID`,`voterCohortSourceID`,`voterCandidateStatus`),
+  ADD KEY `I_voterPollID` (`voterPollID`),
   ADD KEY `I_voterUserID` (`voterUserID`),
   ADD KEY `I_voterCohortSourceID` (`voterCohortSourceID`),
   ADD KEY `I_voterVoted` (`voterStatus`),
   ADD KEY `I_voterCandidateStatus` (`voterCandidateStatus`),
-  ADD KEY `I_voterHasVotedInElection` (`voterElectionID`,`voterUserID`,`voterCohortSourceID`,`voterStatus`);
+  ADD KEY `I_voterHasVotedInPoll` (`voterPollID`,`voterUserID`,`voterCohortSourceID`,`voterStatus`);
 
 --
 -- Indexes for table `email`
 --
 ALTER TABLE `email`
   ADD PRIMARY KEY (`emailID`),
-  ADD UNIQUE KEY `U_electionTypeFrom` (`emailElectionID`,`emailType`,`emailFromReturningOfficer`),
-  ADD KEY `I_emailElectionID` (`emailElectionID`),
+  ADD UNIQUE KEY `U_pollTypeFrom` (`emailPollID`,`emailType`,`emailFromReturningOfficer`),
+  ADD KEY `I_emailPollID` (`emailPollID`),
   ADD KEY `I_emailType` (`emailType`),
   ADD KEY `I_emailFromReturningOfficer` (`emailFromReturningOfficer`),
   ADD KEY `I_emailSendCount` (`emailSendCount`),
@@ -472,16 +471,16 @@ ALTER TABLE `email`
   ADD KEY `I_emailIsTemplate` (`emailIsTemplate`);
 
 --
--- Indexes for table `joinElectionAdmin`
+-- Indexes for table `joinPollAdmin`
 --
-ALTER TABLE `joinElectionAdmin`
-  ADD PRIMARY KEY (`joinElectionAdminElectionID`),
-  ADD UNIQUE KEY `U_joinElectionAdminElectionAdmin` (`joinElectionAdminElectionID`,`joinElectionAdminAdminID`),
-  ADD KEY `I_joinElectionAdminAdminID` (`joinElectionAdminAdminID`),
-  ADD KEY `I_joinElectionAdminEnabled` (`joinElectionAdminEnabled`),
-  ADD KEY `I_joinElectionAdminCreatedByAdminID` (`joinElectionAdminCreatedByAdminID`),
-  ADD KEY `I_joinElectionAdminUpdatedByAdminID` (`joinElectionAdminUpdatedByAdminID`),
-  ADD KEY `I_joinElectionAdminElectionID` (`joinElectionAdminElectionID`);
+ALTER TABLE `joinPollAdmin`
+  ADD PRIMARY KEY (`joinPollAdminPollID`),
+  ADD UNIQUE KEY `U_joinPollAdminPollAdmin` (`joinPollAdminPollID`,`joinPollAdminAdminID`),
+  ADD KEY `I_joinPollAdminAdminID` (`joinPollAdminAdminID`),
+  ADD KEY `I_joinPollAdminEnabled` (`joinPollAdminEnabled`),
+  ADD KEY `I_joinPollAdminCreatedByAdminID` (`joinPollAdminCreatedByAdminID`),
+  ADD KEY `I_joinPollAdminUpdatedByAdminID` (`joinPollAdminUpdatedByAdminID`),
+  ADD KEY `I_joinPollAdminPollID` (`joinPollAdminPollID`);
 
 --
 -- Indexes for table `joinEmailVoter`
@@ -489,6 +488,16 @@ ALTER TABLE `joinElectionAdmin`
 ALTER TABLE `joinEmailVoter`
   ADD KEY `I_joinEmailVoterEmailID` (`joinEmailVoterEmailID`),
   ADD KEY `I_joinEmailVoterVoterID` (`joinEmailVoterVoterID`);
+
+--
+-- Indexes for table `joinRuleAdmin`
+--
+ALTER TABLE `joinPollCohortFilter`
+  ADD UNIQUE KEY `U_joinPollCohortFilter` (`joinPollCohortFilterPollID`,`joinPollCohortFilterCohortFilterID`) USING BTREE,
+  ADD KEY `I_joinPollCohortFilterPollID` (`joinPollCohortFilterPollID`),
+  ADD KEY `I_joinPollCohortFilterCohortFilterID` (`joinPollCohortFilterCohortFilterID`),
+  ADD KEY `I_joinPollCohortFilterCreatedByAdminID` (`joinPollCohortFilterCreatedByAdminID`),
+  ADD KEY `I_joinPollCohortFilterUpdatedByAdminID` (`joinPollCohortFilterUpdatedByAdminID`);
 
 --
 -- Indexes for table `joinRuleAdmin`
@@ -513,20 +522,20 @@ ALTER TABLE `logChanges`
   ADD KEY `I_changeByActionUpdated` (`changeByAdminID`,`changeAction`,`changeUpdatedTable`);
 
 --
--- Indexes for table `logElection`
+-- Indexes for table `logPoll`
 --
-ALTER TABLE `logElection`
+ALTER TABLE `logPoll`
   ADD PRIMARY KEY (`logID`),
-  ADD KEY `I_logElectionID` (`logElectionID`),
+  ADD KEY `I_logPollID` (`logPollID`),
   ADD KEY `I_logType` (`logType`),
   ADD KEY `I_logTypeSub` (`logTypeSub`),
   ADD KEY `I_typeSubtype` (`logType`,`logTypeSub`) USING BTREE,
-  ADD KEY `I_electionType` (`logElectionID`,`logType`),
-  ADD KEY `I_electionSubType` (`logElectionID`,`logTypeSub`),
-  ADD KEY `I_electionTypeSubtype` (`logElectionID`,`logType`,`logTypeSub`),
+  ADD KEY `I_pollType` (`logPollID`,`logType`),
+  ADD KEY `I_pollSubType` (`logPollID`,`logTypeSub`),
+  ADD KEY `I_pollTypeSubtype` (`logPollID`,`logType`,`logTypeSub`),
   ADD KEY `I_logCode` (`logCode`),
-  ADD KEY `I_logElectionSubTypeCode` (`logElectionID`,`logTypeSub`,`logCode`),
-  ADD KEY `I_logElectionCode` (`logElectionID`,`logCode`) USING BTREE;
+  ADD KEY `I_logPollSubTypeCode` (`logPollID`,`logTypeSub`,`logCode`),
+  ADD KEY `I_logPollCode` (`logPollID`,`logCode`) USING BTREE;
 
 --
 -- Indexes for table `party`
@@ -540,23 +549,14 @@ ALTER TABLE `party`
 --
 ALTER TABLE `results`
   ADD PRIMARY KEY (`resultID`),
-  ADD KEY `I_resultsElectionID` (`resultsElectionID`),
+  ADD KEY `I_resultsPollID` (`resultsPollID`),
   ADD KEY `I_resultsTotalVoters` (`resultsTotalVoters`),
   ADD KEY `I_resultsTotalVotesCast` (`resultsTotalVotesCast`),
   ADD KEY `I_resultsSuperseedsResultID` (`resultsSuperseedsResultID`),
   ADD KEY `I_resultsSuperseeded` (`resultID`,`resultsSuperseedsResultID`),
   ADD KEY `I_resultsTotalVotersAndVotes` (`resultsTotalVoters`,`resultsTotalVotesCast`) USING BTREE,
-  ADD KEY `I_resultsSuperseededByElection` (`resultsElectionID`,`resultsSuperseedsResultID`);
+  ADD KEY `I_resultsSuperseededByPoll` (`resultsPollID`,`resultsSuperseedsResultID`);
 
---
--- Indexes for table `resultsCash`
---
-ALTER TABLE `resultsCash`
-  ADD PRIMARY KEY (`resultID`),
-  ADD KEY `I_resultsElectionID` (`resultsElectionID`),
-  ADD KEY `I_resultsTotalVoters` (`resultsTotalVoters`),
-  ADD KEY `I_resultsTotalVotesCast` (`resultsTotalVotesCast`),
-  ADD KEY `I_resultsSuperseedsResultID` (`resultsSuperseedsResultID`);
 
 --
 -- Indexes for table `rules`
@@ -601,10 +601,10 @@ ALTER TABLE `cohortSources`
 ALTER TABLE `countMethod`
   MODIFY `countMethodID` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `election`
+-- AUTO_INCREMENT for table `poll`
 --
-ALTER TABLE `election`
-  MODIFY `electionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `poll`
+  MODIFY `pollID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `electorate`
 --
@@ -616,14 +616,14 @@ ALTER TABLE `electorate`
 ALTER TABLE `email`
   MODIFY `emailID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `joinElectionAdmin`
+-- AUTO_INCREMENT for table `joinPollAdmin`
 --
-ALTER TABLE `joinElectionAdmin`
-  MODIFY `joinElectionAdminElectionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `joinPollAdmin`
+  MODIFY `joinPollAdminPollID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `logElection`
+-- AUTO_INCREMENT for table `logPoll`
 --
-ALTER TABLE `logElection`
+ALTER TABLE `logPoll`
   MODIFY `logID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `party`
@@ -634,11 +634,6 @@ ALTER TABLE `party`
 -- AUTO_INCREMENT for table `results`
 --
 ALTER TABLE `results`
-  MODIFY `resultID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `resultsCash`
---
-ALTER TABLE `resultsCash`
   MODIFY `resultID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `rules`
@@ -661,13 +656,13 @@ ALTER TABLE `admin`
 -- Constraints for table `ballotBox`
 --
 ALTER TABLE `ballotBox`
-  ADD CONSTRAINT `ballotBox_ibfk_1` FOREIGN KEY (`ballotElectionID`) REFERENCES `election` (`electionID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `ballotBox_ibfk_1` FOREIGN KEY (`ballotPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `candidate`
 --
 ALTER TABLE `candidate`
-  ADD CONSTRAINT `candidate_ibfk_1` FOREIGN KEY (`candidateElectionID`) REFERENCES `election` (`electionID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `candidate_ibfk_1` FOREIGN KEY (`candidatePollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `candidate_ibfk_2` FOREIGN KEY (`candidateVoterID`) REFERENCES `electorate` (`voterID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `candidate_ibfk_3` FOREIGN KEY (`candidateUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `candidate_ibfk_4` FOREIGN KEY (`candidateEndorsedByPartyID`) REFERENCES `party` (`partyID`) ON UPDATE CASCADE;
@@ -688,36 +683,44 @@ ALTER TABLE `countMethod`
   ADD CONSTRAINT `countMethod_ibfk_2` FOREIGN KEY (`countMethodUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `election`
+-- Constraints for table `poll`
 --
-ALTER TABLE `election`
-  ADD CONSTRAINT `election_ibfk_1` FOREIGN KEY (`electionID`) REFERENCES `electorate` (`voterElectionID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `election_ibfk_2` FOREIGN KEY (`electionCohortFilterID`) REFERENCES `cohortFilter` (`cohortFilterID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `election_ibfk_3` FOREIGN KEY (`electionRuleID`) REFERENCES `rules` (`ruleID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `election_ibfk_5` FOREIGN KEY (`electionUpdatedByID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
+ALTER TABLE `poll`
+  ADD CONSTRAINT `poll_ibfk_1` FOREIGN KEY (`pollRuleID`) REFERENCES `rules` (`ruleID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `poll_ibfk_3` FOREIGN KEY (`pollUpdatedByID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `electorate`
 --
 ALTER TABLE `electorate`
-  ADD CONSTRAINT `electorate_ibfk_1` FOREIGN KEY (`voterCohortSourceID`) REFERENCES `cohortFilter` (`cohortFilterID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `electorate_ibfk_1` FOREIGN KEY (`voterCohortSourceID`) REFERENCES `cohortFilter` (`cohortFilterID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `electorate_ibfk_2` FOREIGN KEY (`voterPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `email`
 --
 ALTER TABLE `email`
-  ADD CONSTRAINT `email_ibfk_1` FOREIGN KEY (`emailElectionID`) REFERENCES `election` (`electionID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `email_ibfk_1` FOREIGN KEY (`emailPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `email_ibfk_2` FOREIGN KEY (`emailCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `email_ibfk_3` FOREIGN KEY (`emailUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `joinElectionAdmin`
+-- Constraints for table `joinPollAdmin`
 --
-ALTER TABLE `joinElectionAdmin`
-  ADD CONSTRAINT `joinElectionAdmin_ibfk_1` FOREIGN KEY (`joinElectionAdminUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `joinElectionAdmin_ibfk_2` FOREIGN KEY (`joinElectionAdminCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `joinElectionAdmin_ibfk_3` FOREIGN KEY (`joinElectionAdminAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `joinElectionAdmin_ibfk_4` FOREIGN KEY (`joinElectionAdminElectionID`) REFERENCES `election` (`electionID`) ON UPDATE CASCADE;
+ALTER TABLE `joinPollAdmin`
+  ADD CONSTRAINT `joinPollAdmin_ibfk_1` FOREIGN KEY (`joinPollAdminUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinPollAdmin_ibfk_2` FOREIGN KEY (`joinPollAdminCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinPollAdmin_ibfk_3` FOREIGN KEY (`joinPollAdminAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinPollAdmin_ibfk_4` FOREIGN KEY (`joinPollAdminPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `joinPollAdmin`
+--
+ALTER TABLE `joinPollCohortFilter`
+  ADD CONSTRAINT `joinPollCohortFilter_ibfk_1` FOREIGN KEY (`joinPollCohortFilterUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinPollCohortFilter_ibfk_2` FOREIGN KEY (`joinPollCohortFilterCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinPollCohortFilter_ibfk_3` FOREIGN KEY (`joinPollCohortFilterPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinPollCohortFilter_ibfk_4` FOREIGN KEY (`joinPollCohortFilterCohortFilterID`) REFERENCES `cohortFilter` (`cohortFilterID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `joinEmailVoter`
@@ -730,7 +733,10 @@ ALTER TABLE `joinEmailVoter`
 -- Constraints for table `joinRuleAdmin`
 --
 ALTER TABLE `joinRuleAdmin`
-  ADD CONSTRAINT `joinRuleAdmin_ibfk_1` FOREIGN KEY (`joinRuleAdminAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `joinRuleAdmin_ibfk_1` FOREIGN KEY (`joinRuleAdminAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinRuleAdmin_ibfk_2` FOREIGN KEY (`joinRuleAdminCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinRuleAdmin_ibfk_3` FOREIGN KEY (`joinRuleAdminUpdatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `joinRuleAdmin_ibfk_4` FOREIGN KEY (`joinRuleAdminRuleID`) REFERENCES `rules` (`ruleID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `logChanges`
@@ -739,29 +745,21 @@ ALTER TABLE `logChanges`
   ADD CONSTRAINT `logChanges_ibfk_1` FOREIGN KEY (`changeByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `logElection`
+-- Constraints for table `logPoll`
 --
-ALTER TABLE `logElection`
-  ADD CONSTRAINT `logElection_ibfk_1` FOREIGN KEY (`logElectionID`) REFERENCES `election` (`electionID`) ON UPDATE CASCADE;
+ALTER TABLE `logPoll`
+  ADD CONSTRAINT `logPoll_ibfk_1` FOREIGN KEY (`logPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `results`
 --
 ALTER TABLE `results`
-  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`resultsElectionID`) REFERENCES `election` (`electionID`) ON UPDATE CASCADE;
-
---
--- Constraints for table `resultsCash`
---
-ALTER TABLE `resultsCash`
-  ADD CONSTRAINT `resultsCash_ibfk_1` FOREIGN KEY (`resultsElectionID`) REFERENCES `election` (`electionID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `resultsCash_ibfk_2` FOREIGN KEY (`resultsSuperseedsResultID`) REFERENCES `resultsCash` (`resultID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`resultsPollID`) REFERENCES `poll` (`pollID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `rules`
 --
 ALTER TABLE `rules`
-  ADD CONSTRAINT `rules_ibfk_1` FOREIGN KEY (`ruleID`) REFERENCES `joinRuleAdmin` (`joinRuleAdminRuleID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `rules_ibfk_2` FOREIGN KEY (`ruleCountMethodID`) REFERENCES `countMethod` (`countMethodID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `rules_ibfk_3` FOREIGN KEY (`ruleCreatedByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `rules_ibfk_4` FOREIGN KEY (`ruleUpdateByAdminID`) REFERENCES `admin` (`adminID`) ON UPDATE CASCADE;

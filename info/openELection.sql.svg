@@ -1,240 +1,241 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="117cm" height="77cm" viewBox="8 11 2326 1536" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="132cm" height="89cm" viewBox="21 11 2633 1767" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
-    <rect style="fill: #ffffff" x="1461.65" y="1008.25" width="348.8" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" x="1461.65" y="1008.25" width="348.8" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1636.05" y="1028.25">Admins</text>
-    <rect style="fill: #ffffff" x="1461.65" y="1036.25" width="348.8" height="363"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" x="1461.65" y="1036.25" width="348.8" height="363"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1049.45">+adminID: SMALL_INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1065.45">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1086.45">+adminUserID: VARCHAR(255)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1102.45">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1123.45">+adminLevel: ENUM = Basic</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1139.45">INDEX</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1153.45">'basic',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1167.45">'official',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1181.45">'election',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1195.45">'rule', 'super',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1209.45">'root'</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1230.45">+adminCreated: DATE_TIME</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1246.45">+adminCreatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1262.45">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1283.45">+adminUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1299.45">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1313.45">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1334.45">+adminUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1350.45">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1464.65" y="1371.45">+adminCohortSourceID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1464.65" y="1387.45">INDEX</text>
-    <rect style="fill: #ffffff" x="1461.65" y="1399.25" width="348.8" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" x="1461.65" y="1399.25" width="348.8" height="8"/>
+    <rect style="fill: #ffffff" x="1724.65" y="982.072" width="348.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" x="1724.65" y="982.072" width="348.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1899.05" y="1002.07">Admins</text>
+    <rect style="fill: #ffffff" x="1724.65" y="1010.07" width="348.8" height="363"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" x="1724.65" y="1010.07" width="348.8" height="363"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1023.27">+adminID: SMALL_INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1039.27">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1060.27">+adminUserID: VARCHAR(255)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1076.27">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1097.27">+adminCohortSourceID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1113.27">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1134.27">+adminLevel: ENUM = Basic</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1150.27">INDEX</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1164.27">'basic',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1178.27">'official',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1192.27">'election',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1206.27">'rule', 'super',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1220.27">'root'</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1241.27">+adminCreated: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1257.27">+adminCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1273.27">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1294.27">+adminUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1310.27">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1324.27">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1727.65" y="1345.27">+adminUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1727.65" y="1361.27">INDEX</text>
+    <rect style="fill: #ffffff" x="1724.65" y="1373.07" width="348.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" x="1724.65" y="1373.07" width="348.8" height="8"/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="977.392" y="1179.88" width="402.7" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="977.392" y="1179.88" width="402.7" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1178.74" y="1199.88">CohortFilter</text>
-    <rect style="fill: #ffffff" x="977.392" y="1207.88" width="402.7" height="325"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="977.392" y="1207.88" width="402.7" height="325"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1221.08">+cohortFilterID: SMALL_INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1237.08">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1258.08">+cohortFilterName: VARCHAR(64)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1274.08">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1295.08">+cohortDescription: TEXT(1024)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1311.08">+cohortFilterEnabled: SMALL_INT = 0</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1327.08">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1348.08">+cohortFilterSourceID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1364.08">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1385.08">+cohortFilterPerameters: TEXT/JSON</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1401.08">+cohortFIlterCreated: DATE_TIME</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1417.08">+cohortFilterCreatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1433.08">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1454.08">+cohortFilterUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1470.08">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1484.08">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="980.392" y="1505.08">+cohortFilterUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="980.392" y="1521.08">INDEX</text>
-    <rect style="fill: #ffffff" x="977.392" y="1532.88" width="402.7" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="977.392" y="1532.88" width="402.7" height="8"/>
+    <rect style="fill: #ffffff" x="1169.75" y="1106.66" width="402.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1169.75" y="1106.66" width="402.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1371.1" y="1126.66">CohortFilter</text>
+    <rect style="fill: #ffffff" x="1169.75" y="1134.66" width="402.7" height="325"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1169.75" y="1134.66" width="402.7" height="325"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1147.86">+cohortFilterID: SMALL_INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1163.86">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1184.86">+cohortFilterName: VARCHAR(64)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1200.86">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1221.86">+cohortDescription: TEXT(1024)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1237.86">+cohortFilterEnabled: SMALL_INT = 0</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1253.86">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1274.86">+cohortFilterSourceID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1290.86">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1311.86">+cohortFilterPerameters: TEXT/JSON</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1327.86">+cohortFIlterCreated: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1343.86">+cohortFilterCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1359.86">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1380.86">+cohortFilterUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1396.86">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1410.86">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1172.75" y="1431.86">+cohortFilterUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1172.75" y="1447.86">INDEX</text>
+    <rect style="fill: #ffffff" x="1169.75" y="1459.66" width="402.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1169.75" y="1459.66" width="402.7" height="8"/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="994.538" y="12.9964" width="287.2" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" x="994.538" y="12.9964" width="287.2" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1138.14" y="32.9964">Election</text>
-    <rect style="fill: #ffffff" x="994.538" y="40.9964" width="287.2" height="724"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" x="994.538" y="40.9964" width="287.2" height="724"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="54.1964">+electionID: int = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="70.1964">PIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="91.1964">+electionName: VARCHAR(128)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="107.196">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="128.196">+electionYear: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="144.196">INDEX</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="158.196">used in the URL</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="172.196">path</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="193.196">+electionURL: VARCHAR(64)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="209.196">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="230.196">+electionDescription: TEXT</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="246.196">+electionStatus: ENUM = pending</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="262.196">INDEX</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="276.196">'pending',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="290.196">'accepting</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="304.196">nominations',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="318.196">'campaigning',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="332.196">'voting',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="346.196">'counting',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="360.196">'results',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="374.196">'archived'</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="395.196">+electionCohortFilterID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="411.196">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="432.196">+electionRuleID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="448.196">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="469.196">+electionVotingStart: DATE_TIME</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="485.196">+electionReturningOfficerID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="501.196">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="522.196">+electionContactOfficerID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="538.196">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="559.196">+electionIsPublic: SMALL_INT = 1</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="575.196">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="596.196">+electionIsReferendum: SMALL_INT = 0</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="612.196">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="633.196">+electionCreated: DATE_TIME</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="649.196">+electionCreatedByID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="665.196">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="686.196">+electionUpdated: TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="702.196">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="716.196">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="997.538" y="737.196">+electionUpdatedByID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="997.538" y="753.196">INDEX</text>
-    <rect style="fill: #ffffff" x="994.538" y="764.996" width="287.2" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" x="994.538" y="764.996" width="287.2" height="8"/>
+    <rect style="fill: #ffffff" x="1182.9" y="12.9964" width="256.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" x="1182.9" y="12.9964" width="256.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1311.1" y="32.9964">Poll</text>
+    <rect style="fill: #ffffff" x="1182.9" y="40.9964" width="256.4" height="687"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" x="1182.9" y="40.9964" width="256.4" height="687"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="54.1964">+pollID: int = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="70.1964">PIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="91.1964">+pollName: VARCHAR(128)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="107.196">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="128.196">+pollYear: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="144.196">INDEX</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="158.196">used in the URL</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="172.196">path</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="193.196">+pollURL: VARCHAR(64)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="209.196">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="230.196">+pollDescription: TEXT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="246.196">+pollStatus: ENUM = pending</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="262.196">INDEX</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="276.196">'pending',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="290.196">'accepting</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="304.196">nominations',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="318.196">'campaigning',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="332.196">'voting',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="346.196">'counting',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="360.196">'results',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="374.196">'archived'</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="395.196">+pollRuleID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="411.196">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="432.196">+pollVotingStart: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="448.196">+pollReturningOfficerID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="464.196">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="485.196">+pollContactOfficerID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="501.196">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="522.196">+pollIsPublic: SMALL_INT = 1</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="538.196">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="559.196">+pollIsReferendum: SMALL_INT = 0</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="575.196">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="596.196">+pollCreated: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="612.196">+pollCreatedByID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="628.196">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="649.196">+pollUpdated: TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="665.196">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="679.196">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1185.9" y="700.196">+pollUpdatedByID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1185.9" y="716.196">INDEX</text>
+    <rect style="fill: #ffffff" x="1182.9" y="727.996" width="256.4" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" x="1182.9" y="727.996" width="256.4" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.07,1046.25 1872.07,1243.25 1810.45,1243.25 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.9,1020.07 2152.9,1254.07 2073.46,1254.07 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.07,1046.25 1872.07,1331.25 1810.45,1331.25 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.9,1020.07 2152.9,1342.07 2073.46,1342.07 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.95,1046.25 1419.95,645.996 1281.74,645.996 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.12,1020.07 1643.12,608.996 1439.3,608.996 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.95,1046.25 1419.95,733.996 1281.74,733.996 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.12,1020.07 1643.12,696.996 1439.3,696.996 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="502.54" y="401.21" width="348.8" height="42"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" x="502.54" y="401.21" width="348.8" height="42"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="676.94" y="421.21">Electorate</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="676.94" y="436.41">(Voting cohort)</text>
-    <rect style="fill: #ffffff" x="502.54" y="443.21" width="348.8" height="407"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" x="502.54" y="443.21" width="348.8" height="407"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="456.41">+voterID: INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="472.41">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="493.41">+voterElectionID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="509.41">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="530.41">+voterUserID: VARCHAR(125)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="546.41">UNIQUE:</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="560.41">electionID +</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="574.41">voterUserID +</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="588.41">cohortSourceID</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="609.41">+voterFullName: VARCHAR(125)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="625.41">+voterEmail: VARCHAR(255)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="641.41">+voterStatus: ENUM = allowed</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="657.41">INDEX</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="671.41">'forbidden',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="685.41">'allowed',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="699.41">'voted'</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="720.41">+voterCandidateStatus: ENUM = eligible</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="736.41">INDEX</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="750.41">'disqualified',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="764.41">'cannot stand',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="778.41">'eligible', 'is</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="792.41">standing',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505.54" y="806.41">'elected'</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="827.41">+voterBallotPaperCheckSum: CHAR(255)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="505.54" y="843.41">+voterCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
-    <rect style="fill: #ffffff" x="502.54" y="850.21" width="348.8" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" x="502.54" y="850.21" width="348.8" height="8"/>
+    <rect style="fill: #ffffff" x="614.284" y="460.14" width="348.8" height="42"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" x="614.284" y="460.14" width="348.8" height="42"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="788.684" y="480.14">Electorate</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="788.684" y="495.34">(Voting cohort)</text>
+    <rect style="fill: #ffffff" x="614.284" y="502.14" width="348.8" height="458"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" x="614.284" y="502.14" width="348.8" height="458"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="515.34">+voterID: INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="531.34">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="552.34">+voterElectionID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="568.34">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="589.34">+voterUserID: VARCHAR(125)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="605.34">UNIQUE:</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="619.34">voterPollID +</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="633.34">voterUserID +</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="647.34">voterCohortSource</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="661.34">ID</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="682.34">+voterCohortSourceID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="698.34">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="719.34">+voterFullName: VARCHAR(125)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="735.34">+voterEmail: VARCHAR(255)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="751.34">+voterStatus: ENUM = allowed</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="767.34">INDEX</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="781.34">'forbidden',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="795.34">'allowed',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="809.34">'voted'</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="830.34">+voterCandidateStatus: ENUM = eligible</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="846.34">INDEX</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="860.34">'disqualified',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="874.34">'cannot stand',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="888.34">'eligible', 'is</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="902.34">standing',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.284" y="916.34">'elected'</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="937.34">+voterBallotPaperCheckSum: CHAR(255)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="617.284" y="953.34">+voterCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
+    <rect style="fill: #ffffff" x="614.284" y="960.14" width="348.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" x="614.284" y="960.14" width="348.8" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,50.9964 928.56,50.9964 928.56,490.21 851.34,490.21 "/>
-    <polygon style="fill: #ffffff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 1075.14,50.9964 1075.14,549.14 963.084,549.14 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="1441.11" y="205.772" width="371.9" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" x="1441.11" y="205.772" width="371.9" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1627.06" y="225.772">Rules</text>
-    <rect style="fill: #ffffff" x="1441.11" y="233.772" width="371.9" height="740"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" x="1441.11" y="233.772" width="371.9" height="740"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="246.972">+ruleID: SMALL_INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="262.972">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="283.972">+ruleName: VARCHAR(160)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="299.972">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="320.972">+ruleDescription: TEXT(500)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="336.972">+ruleCountMethodID: SMALL_INT = 1</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="352.972">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="373.972">+ruleCountMethodOptions: TEXT/JSON</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="389.972">+ruleEnabled: SMALL_INT = 1</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="405.972">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="426.972">+rulePeriodNomination: SMALL_INT = 7</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="442.972">(number of days</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="456.972">nomination</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="470.972">period lasts)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="491.972">+rulePeriodCampaign: SMALL_INT = 14</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="507.972">(days between</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="521.972">when nominations</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="535.972">end and voting</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="549.972">starts)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="570.972">+rulePeriodVoting: SMALL_INT = 14</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="586.972">(number of days</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="600.972">in which voters</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="614.972">can vote)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="635.972">+rulePeriodResults: SMALL_INT = 28</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="651.972">(number of days</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="665.972">after which the</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="679.972">election ballot</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="693.972">box is archived)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="714.972">+ruleWinnerCount: SMALL_INT = 1</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="730.972">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="751.972">+ruleNominatorCount: SMALL_INT = 0</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="767.972">+ruleBallotVerificationAllowed: SMALL_INT = 0</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="783.972">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="804.972">+ruleUpdateElectorateBeforeOpening: Boolean = 0</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="820.972">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="841.972">+ruleCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="857.972">+ruleCreatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="873.972">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="894.972">+ruleUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="910.972">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="924.972">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1444.11" y="945.972">+ruleUpdateByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1444.11" y="961.972">INDEX</text>
-    <rect style="fill: #ffffff" x="1441.11" y="973.772" width="371.9" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" x="1441.11" y="973.772" width="371.9" height="8"/>
+    <rect style="fill: #ffffff" x="1694.86" y="153.717" width="371.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" x="1694.86" y="153.717" width="371.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1880.81" y="173.717">Rules</text>
+    <rect style="fill: #ffffff" x="1694.86" y="181.717" width="371.9" height="740"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" x="1694.86" y="181.717" width="371.9" height="740"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="194.917">+ruleID: SMALL_INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="210.917">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="231.917">+ruleName: VARCHAR(160)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="247.917">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="268.917">+ruleDescription: TEXT(500)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="284.917">+ruleCountMethodID: SMALL_INT = 1</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="300.917">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="321.917">+ruleCountMethodOptions: TEXT/JSON</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="337.917">+ruleEnabled: SMALL_INT = 1</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="353.917">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="374.917">+rulePeriodNomination: SMALL_INT = 7</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="390.917">(number of days</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="404.917">nomination</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="418.917">period lasts)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="439.917">+rulePeriodCampaign: SMALL_INT = 14</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="455.917">(days between</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="469.917">when nominations</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="483.917">end and voting</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="497.917">starts)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="518.917">+rulePeriodVoting: SMALL_INT = 14</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="534.917">(number of days</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="548.917">in which voters</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="562.917">can vote)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="583.917">+rulePeriodResults: SMALL_INT = 28</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="599.917">(number of days</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="613.917">after which the</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="627.917">election ballot</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="641.917">box is archived)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="662.917">+ruleWinnerCount: SMALL_INT = 1</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="678.917">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="699.917">+ruleNominatorCount: SMALL_INT = 0</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="715.917">+ruleBallotVerificationAllowed: SMALL_INT = 0</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="731.917">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="752.917">+ruleUpdateElectorateBeforeOpening: Boolean = 0</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="768.917">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="789.917">+ruleCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="805.917">+ruleCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="821.917">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="842.917">+ruleUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="858.917">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="872.917">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1697.86" y="893.917">+ruleUpdateByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1697.86" y="909.917">INDEX</text>
+    <rect style="fill: #ffffff" x="1694.86" y="921.717" width="371.9" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" x="1694.86" y="921.717" width="371.9" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.07,1046.25 1872.07,854.772 1813.01,854.772 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,802.718 2066.76,802.718 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.07,1046.25 1872.07,942.772 1813.01,942.772 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,890.718 2066.76,890.718 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="1422.87,243.772 1353.42,243.772 1353.42,428.996 1281.74,428.996 "/>
-    <polygon style="fill: #ffffff" points="1422.87,251.772 1438.87,243.772 1422.87,235.772 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="1422.87,251.772 1438.87,243.772 1422.87,235.772 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="1676.63,191.717 1559.08,191.717 1559.08,391.996 1439.3,391.996 "/>
+    <polygon style="fill: #ffffff" points="1676.63,199.717 1692.63,191.717 1676.63,183.717 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="1676.63,199.717 1692.63,191.717 1676.63,183.717 "/>
   </g>
   <g>
     <rect style="fill: #ffffff" x="103.393" y="12.3463" width="202.5" height="28"/>
@@ -251,270 +252,270 @@
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="103.393" y="129.346" width="202.5" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,50.9964 411.63,50.9964 411.63,50.3462 305.894,50.3462 "/>
-    <polygon style="fill: #ffffff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 411.63,50.9964 411.63,50.3462 305.894,50.3462 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="511.022" y="896.56" width="379.6" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="511.022" y="896.56" width="379.6" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="700.822" y="916.56">Candidates</text>
-    <rect style="fill: #ffffff" x="511.022" y="924.56" width="379.6" height="439"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="511.022" y="924.56" width="379.6" height="439"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="937.76">+candidateID: INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="953.76">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="974.76">+candidatevoterElectionID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="990.76">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1011.76">+candidateVoterID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1027.76">UNIQUE:</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1041.76">candidateElection</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1055.76">ID +</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1069.76">candidateVoterID</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1090.76">+candidateCampaignURL: TEXT(1024)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1106.76">+candidateStatement: TEXT(2000)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1122.76">+candidatePhotoURL: TEXT(1024)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1138.76">+candidateEndorsedByPartyID: SMALL_INT = NULL</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1154.76">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1175.76">+candidateEndorsementStatus: ENUM = none</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1191.76">INDEX</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1205.76">'rejected',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1219.76">'none',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1233.76">'requested',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1247.76">'varified'</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1268.76">+candidateCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1284.76">+candidateUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1300.76">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1314.76">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="514.022" y="1335.76">+candidateUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="514.022" y="1351.76">INDEX</text>
-    <rect style="fill: #ffffff" x="511.022" y="1363.56" width="379.6" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="511.022" y="1363.56" width="379.6" height="8"/>
+    <rect style="fill: #ffffff" x="612.676" y="1023.97" width="379.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="612.676" y="1023.97" width="379.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="802.476" y="1043.97">Candidates</text>
+    <rect style="fill: #ffffff" x="612.676" y="1051.97" width="379.6" height="439"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="612.676" y="1051.97" width="379.6" height="439"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1065.17">+candidateID: INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1081.17">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1102.17">+candidateVoterPollID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1118.17">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1139.17">+candidateVoterID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1155.17">UNIQUE:</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1169.17">candidateElection</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1183.17">ID +</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1197.17">candidateVoterID</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1218.17">+candidateCampaignURL: TEXT(1024)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1234.17">+candidateStatement: TEXT(2000)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1250.17">+candidatePhotoURL: TEXT(1024)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1266.17">+candidateEndorsedByPartyID: SMALL_INT = NULL</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1282.17">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1303.17">+candidateEndorsementStatus: ENUM = none</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1319.17">INDEX</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1333.17">'rejected',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1347.17">'none',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1361.17">'requested',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1375.17">'varified'</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1396.17">+candidateCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1412.17">+candidateUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1428.17">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1442.17">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="615.676" y="1463.17">+candidateUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="615.676" y="1479.17">INDEX</text>
+    <rect style="fill: #ffffff" x="612.676" y="1490.97" width="379.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="612.676" y="1490.97" width="379.6" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,50.9964 928.56,50.9964 928.56,971.56 890.622,971.56 "/>
-    <polygon style="fill: #ffffff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 1075.14,50.9964 1075.14,1098.97 992.276,1098.97 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="484.304,453.21 472.662,453.21 472.662,1008.56 511.022,1008.56 "/>
-    <polygon style="fill: #ffffff" points="484.304,461.21 500.304,453.21 484.304,445.21 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="484.304,461.21 500.304,453.21 484.304,445.21 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="596.048,512.14 507.346,512.14 507.346,1135.97 612.676,1135.97 "/>
+    <polygon style="fill: #ffffff" points="596.048,520.14 612.048,512.14 596.048,504.14 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="596.048,520.14 612.048,512.14 596.048,504.14 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="1470.08" y="1425.93" width="341.1" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1470.08" y="1425.93" width="341.1" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1640.63" y="1445.93">CohortSources</text>
-    <rect style="fill: #ffffff" x="1470.08" y="1453.93" width="341.1" height="84"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1470.08" y="1453.93" width="341.1" height="84"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1473.08" y="1467.13">+cohortSourceID: SMALL_INT = AUTO_INCREMENT</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1473.08" y="1483.13">+cohortName: VARCHAR(64)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1473.08" y="1499.13">+cohortDescription: TEXT(1024)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1473.08" y="1515.13">+cohortEnabled: SMALL_INT = 0</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1473.08" y="1531.13">+cohortSourceFilterOptions: TEXT/JSON</text>
-    <rect style="fill: #ffffff" x="1470.08" y="1537.93" width="341.1" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1470.08" y="1537.93" width="341.1" height="8"/>
+    <rect style="fill: #ffffff" x="1739.69" y="1452.56" width="341.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" x="1739.69" y="1452.56" width="341.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1910.24" y="1472.56">CohortSources</text>
+    <rect style="fill: #ffffff" x="1739.69" y="1480.56" width="341.1" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" x="1739.69" y="1480.56" width="341.1" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1742.69" y="1493.76">+cohortSourceID: SMALL_INT = AUTO_INCREMENT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1742.69" y="1509.76">+cohortName: VARCHAR(64)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1742.69" y="1525.76">+cohortDescription: TEXT(1024)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1742.69" y="1541.76">+cohortEnabled: SMALL_INT = 0</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1742.69" y="1557.76">+cohortSourceFilterOptions: TEXT/JSON</text>
+    <rect style="fill: #ffffff" x="1739.69" y="1564.56" width="341.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" x="1739.69" y="1564.56" width="341.1" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.8,1046.25 1419.8,1413.88 1380.09,1413.88 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.12,1020.07 1643.12,1340.66 1572.45,1340.66 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1410.6,1046.25 1410.6,1501.88 1380.09,1501.88 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.12,1020.07 1643.12,1428.66 1572.45,1428.66 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="959.156,1217.88 951.436,1217.88 951.436,391.996 994.538,391.996 "/>
-    <polygon style="fill: #ffffff" points="959.156,1225.88 975.156,1217.88 959.156,1209.88 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="959.156,1225.88 975.156,1217.88 959.156,1209.88 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1151.52,1144.66 1041.68,1144.66 1041.68,1597.03 1172.94,1597.03 "/>
+    <polygon style="fill: #ffffff" points="1151.52,1152.66 1167.52,1144.66 1151.52,1136.66 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1151.52,1152.66 1167.52,1144.66 1151.52,1136.66 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="1916.58" y="781.884" width="395" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1916.58" y="781.884" width="395" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2114.08" y="801.884">CountMethods</text>
-    <rect style="fill: #ffffff" x="1916.58" y="809.884" width="395" height="304"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1916.58" y="809.884" width="395" height="304"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="823.084">+countMethodID: SMALL_INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1919.58" y="839.084">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="860.084">+countMethodName: VARCHAR(64)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1919.58" y="876.084">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="897.084">+countMethodOfficialName: VARCHAR(64)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1919.58" y="913.084">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="934.084">+countMethodDescription: TEXT(1024)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="950.084">+countMethodInfoURL: TEXT(1024)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="966.084">+countMethodOptionsDefaults: TEXT/JSON</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="982.084">+countMethodCreated: DATE_TIME</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="998.084">+countMethodCreatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1919.58" y="1014.08">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="1035.08">+countMethodUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1919.58" y="1051.08">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1919.58" y="1065.08">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1919.58" y="1086.08">+countMethodUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1919.58" y="1102.08">INDEX</text>
-    <rect style="fill: #ffffff" x="1916.58" y="1113.88" width="395" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1916.58" y="1113.88" width="395" height="8"/>
+    <rect style="fill: #ffffff" x="2230.1" y="805.656" width="395" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2230.1" y="805.656" width="395" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2427.6" y="825.656">CountMethods</text>
+    <rect style="fill: #ffffff" x="2230.1" y="833.656" width="395" height="304"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2230.1" y="833.656" width="395" height="304"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="846.856">+countMethodID: SMALL_INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2233.1" y="862.856">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="883.856">+countMethodName: VARCHAR(64)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2233.1" y="899.856">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="920.856">+countMethodOfficialName: VARCHAR(64)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2233.1" y="936.856">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="957.856">+countMethodDescription: TEXT(1024)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="973.856">+countMethodInfoURL: TEXT(1024)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="989.856">+countMethodOptionsDefaults: TEXT/JSON</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="1005.86">+countMethodCreated: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="1021.86">+countMethodCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2233.1" y="1037.86">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="1058.86">+countMethodUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2233.1" y="1074.86">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2233.1" y="1088.86">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2233.1" y="1109.86">+countMethodUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2233.1" y="1125.86">INDEX</text>
+    <rect style="fill: #ffffff" x="2230.1" y="1137.66" width="395" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2230.1" y="1137.66" width="395" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1898.34,819.884 1836.27,819.884 1836.27,333.772 1813.01,333.772 "/>
-    <polygon style="fill: #ffffff" points="1898.34,827.884 1914.34,819.884 1898.34,811.884 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1898.34,827.884 1914.34,819.884 1898.34,811.884 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2211.86,843.656 2112.1,843.656 2112.1,281.718 2066.76,281.718 "/>
+    <polygon style="fill: #ffffff" points="2211.86,851.656 2227.86,843.656 2211.86,835.656 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="2211.86,851.656 2227.86,843.656 2211.86,835.656 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.08,1046.25 1872.08,994.884 1916.58,994.884 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.9,1020.07 2152.9,1018.66 2230.1,1018.66 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.2,1046.25 1872.2,1082.88 1916.58,1082.88 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.9,1020.07 2152.9,1106.66 2230.1,1106.66 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.95,1046.25 1419.95,481.996 1281.74,481.996 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.18,1020.07 1643.18,444.996 1439.3,444.996 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.95,1046.25 1419.95,518.996 1281.74,518.996 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.18,1020.07 1643.18,481.996 1439.3,481.996 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="56.5002" y="636.766" width="348.8" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="56.5002" y="636.766" width="348.8" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="230.9" y="656.766">Email</text>
-    <rect style="fill: #ffffff" x="56.5002" y="664.766" width="348.8" height="615"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="56.5002" y="664.766" width="348.8" height="615"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="677.966">+emailID: INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="693.966">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="714.966">+emailElectionID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="730.966">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="751.966">+emailType: ENUM</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="767.966">INDEX</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="781.966">'call for</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="795.966">nominations',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="809.966">'nominations</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="823.966">open',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="837.966">'nominations</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="851.966">remider',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="865.966">'nominations</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="879.966">closed', 'voting</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="893.966">open', 'voting</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="907.966">reminder',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="921.966">'voting closed',</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="935.966">'results'</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="956.966">+emailIsTemplate: Boolean = 0</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="972.966">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="993.966">+emailSubject: VARCHAR(255)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1009.97">+emailFromReturningOfficer: SMALL_INT = 1</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="1025.97">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1046.97">+emailReplyTo: TEXT</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1062.97">+emailBody: TEXT(4092)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="1078.97">text/html</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1099.97">+emailStartSend: DATE_TIME = NULL</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1115.97">+emailSendEnd: DATE_TIME</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1131.97">+emailSendCount: INT</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1147.97">+emailCreated: DATE_TIME</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1163.97">+emailCreatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="1179.97">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1200.97">+emailUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="1216.97">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="1230.97">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="59.5002" y="1251.97">+emailUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="59.5002" y="1267.97">INDEX</text>
-    <rect style="fill: #ffffff" x="56.5002" y="1279.77" width="348.8" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="56.5002" y="1279.77" width="348.8" height="8"/>
+    <rect style="fill: #ffffff" x="69.438" y="788.324" width="348.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="69.438" y="788.324" width="348.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="243.838" y="808.324">Email</text>
+    <rect style="fill: #ffffff" x="69.438" y="816.324" width="348.8" height="615"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="69.438" y="816.324" width="348.8" height="615"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="829.524">+emailID: INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="845.524">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="866.524">+emailPollID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="882.524">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="903.524">+emailType: ENUM</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="919.524">INDEX</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="933.524">'call for</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="947.524">nominations',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="961.524">'nominations</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="975.524">open',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="989.524">'nominations</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1003.52">remider',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1017.52">'nominations</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1031.52">closed', 'voting</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1045.52">open', 'voting</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1059.52">reminder',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1073.52">'voting closed',</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1087.52">'results'</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1108.52">+emailIsTemplate: Boolean = 0</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1124.52">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1145.52">+emailSubject: VARCHAR(255)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1161.52">+emailFromReturningOfficer: SMALL_INT = 1</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1177.52">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1198.52">+emailReplyTo: TEXT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1214.52">+emailBody: TEXT(4092)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1230.52">text/html</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1251.52">+emailStartSend: DATE_TIME = NULL</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1267.52">+emailSendEnd: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1283.52">+emailSendCount: INT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1299.52">+emailCreated: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1315.52">+emailCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1331.52">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1352.52">+emailUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1368.52">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1382.52">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="72.438" y="1403.52">+emailUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="72.438" y="1419.52">INDEX</text>
+    <rect style="fill: #ffffff" x="69.438" y="1431.32" width="348.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="69.438" y="1431.32" width="348.8" height="8"/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="493.04" y="95.5396" width="371.9" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="493.04" y="95.5396" width="371.9" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="678.99" y="115.54">resultsCash</text>
-    <rect style="fill: #ffffff" x="493.04" y="123.54" width="371.9" height="230"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="493.04" y="123.54" width="371.9" height="230"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="136.74">+resultID: INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="496.04" y="152.74">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="173.74">+resultsElectionID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="496.04" y="189.74">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="210.74">+resultsTotalVoters: INT</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="226.74">+resultsTotalVotesCast: INT</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="242.74">+resultsCounted: TIMESATAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="496.04" y="258.74">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="496.04" y="272.74">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="293.74">+resultsSuperseedsResultID: INT = NULL</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="496.04" y="309.74">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="330.74">+resultsWinners: TEXT/JSON</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="496.04" y="346.74">+resultsDetails: TEXT/JSON</text>
-    <rect style="fill: #ffffff" x="493.04" y="353.54" width="371.9" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="493.04" y="353.54" width="371.9" height="8"/>
+    <rect style="fill: #ffffff" x="605.784" y="99.2362" width="371.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="605.784" y="99.2362" width="371.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="791.734" y="119.236">resultsCash</text>
+    <rect style="fill: #ffffff" x="605.784" y="127.236" width="371.9" height="230"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="605.784" y="127.236" width="371.9" height="230"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="140.436">+resultID: INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="608.784" y="156.436">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="177.436">+resultsElectionID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="608.784" y="193.436">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="214.436">+resultsTotalVoters: INT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="230.436">+resultsTotalVotesCast: INT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="246.436">+resultsCounted: TIMESATAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="608.784" y="262.436">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="608.784" y="276.436">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="297.436">+resultsSuperseedsResultID: INT = NULL</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="608.784" y="313.436">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="334.436">+resultsWinners: TEXT/JSON</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="608.784" y="350.436">+resultsDetails: TEXT/JSON</text>
+    <rect style="fill: #ffffff" x="605.784" y="357.236" width="371.9" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="605.784" y="357.236" width="371.9" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,50.9964 928.56,50.9964 928.56,170.54 864.94,170.54 "/>
-    <polygon style="fill: #ffffff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 1075.14,50.9964 1075.14,174.236 977.684,174.236 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="474.804,133.54 456.04,133.54 456.04,290.54 493.04,290.54 "/>
-    <polygon style="fill: #ffffff" points="474.804,141.54 490.804,133.54 474.804,125.54 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="474.804,141.54 490.804,133.54 474.804,125.54 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="587.548,137.236 568.784,137.236 568.784,294.236 605.784,294.236 "/>
+    <polygon style="fill: #ffffff" points="587.548,145.236 603.548,137.236 587.548,129.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="587.548,145.236 603.548,137.236 587.548,129.236 "/>
   </g>
   <g>
-    <rect style="fill: #fdfdc5" x="30.5244" y="1356.31" width="425.8" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="30.5244" y="1356.31" width="425.8" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="243.424" y="1376.31">joinEmailVoter</text>
-    <rect style="fill: #fdfdc5" x="30.5244" y="1384.31" width="425.8" height="136"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="30.5244" y="1384.31" width="425.8" height="136"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="33.5244" y="1397.51">+joinEmailVoterEmailID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="33.5244" y="1413.51">UNIQUE:</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="33.5244" y="1427.51">emailEmailID +</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="33.5244" y="1441.51">emailVoterID</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="33.5244" y="1462.51">+joinEmailVoterVoterID: INT</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="33.5244" y="1478.51">+joinEmailVoterSendTime: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="33.5244" y="1494.51">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="33.5244" y="1508.51">CURRENT_TIMESTAMP</text>
-    <rect style="fill: #fdfdc5" x="30.5244" y="1520.31" width="425.8" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="30.5244" y="1520.31" width="425.8" height="8"/>
+    <rect style="fill: #fdfdc5" x="43.4622" y="1507.87" width="425.8" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43.4622" y="1507.87" width="425.8" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="256.362" y="1527.87">joinEmailVoter</text>
+    <rect style="fill: #fdfdc5" x="43.4622" y="1535.87" width="425.8" height="136"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43.4622" y="1535.87" width="425.8" height="136"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46.4622" y="1549.07">+joinEmailVoterEmailID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="46.4622" y="1565.07">UNIQUE:</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="46.4622" y="1579.07">emailEmailID +</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="46.4622" y="1593.07">emailVoterID</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46.4622" y="1614.07">+joinEmailVoterVoterID: INT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="46.4622" y="1630.07">+joinEmailVoterSendTime: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="46.4622" y="1646.07">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="46.4622" y="1660.07">CURRENT_TIMESTAMP</text>
+    <rect style="fill: #fdfdc5" x="43.4622" y="1671.87" width="425.8" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="43.4622" y="1671.87" width="425.8" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="38.2641,674.766 9.5244,674.766 9.5244,1394.31 30.5244,1394.31 "/>
-    <polygon style="fill: #ffffff" points="38.2641,682.766 54.2641,674.766 38.2641,666.766 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="38.2641,682.766 54.2641,674.766 38.2641,666.766 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="51.2019,826.324 22.4622,826.324 22.4622,1545.87 43.4622,1545.87 "/>
+    <polygon style="fill: #ffffff" points="51.2019,834.324 67.2019,826.324 51.2019,818.324 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="51.2019,834.324 67.2019,826.324 51.2019,818.324 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="484.304,453.21 472.662,453.21 472.662,1459.31 456.324,1459.31 "/>
-    <polygon style="fill: #ffffff" points="484.304,461.21 500.304,453.21 484.304,445.21 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="484.304,461.21 500.304,453.21 484.304,445.21 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="596.048,512.14 507.346,512.14 507.346,1610.87 469.262,1610.87 "/>
+    <polygon style="fill: #ffffff" points="596.048,520.14 612.048,512.14 596.048,504.14 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #009c00" points="596.048,520.14 612.048,512.14 596.048,504.14 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1451.84,1463.93 1439.4,1463.93 1439.4,1344.88 1380.09,1344.88 "/>
-    <polygon style="fill: #ffffff" points="1451.84,1471.93 1467.84,1463.93 1451.84,1455.93 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="1451.84,1471.93 1467.84,1463.93 1451.84,1455.93 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" points="1721.45,1490.56 1679.53,1490.56 1679.53,1271.66 1572.45,1271.66 "/>
+    <polygon style="fill: #ffffff" points="1721.45,1498.56 1737.45,1490.56 1721.45,1482.56 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" points="1721.45,1498.56 1737.45,1490.56 1721.45,1482.56 "/>
   </g>
   <g>
-    <rect style="fill: #ffdbe1" x="1908.99" y="1221.61" width="410.4" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1908.99" y="1221.61" width="410.4" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2114.19" y="1241.61">logChanges</text>
-    <rect style="fill: #ffdbe1" x="1908.99" y="1249.61" width="410.4" height="147"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1908.99" y="1249.61" width="410.4" height="147"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1911.99" y="1262.81">+changeTime: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1911.99" y="1278.81">+changeByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1911.99" y="1294.81">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1911.99" y="1315.81">+changeAction: ENUM = ('INSERT', 'UPDATE', 'DELETE')</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1911.99" y="1331.81">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1911.99" y="1352.81">+changeTable: VARCHAR(32)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1911.99" y="1368.81">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1911.99" y="1389.81">+changeDiff: TEXT</text>
-    <rect style="fill: #ffdbe1" x="1908.99" y="1396.61" width="410.4" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1908.99" y="1396.61" width="410.4" height="8"/>
+    <rect style="fill: #ffdbe1" x="2232.68" y="1384.92" width="410.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2232.68" y="1384.92" width="410.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2437.88" y="1404.92">logChanges</text>
+    <rect style="fill: #ffdbe1" x="2232.68" y="1412.92" width="410.4" height="147"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2232.68" y="1412.92" width="410.4" height="147"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2235.68" y="1426.12">+changeTime: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2235.68" y="1442.12">+changeByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2235.68" y="1458.12">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2235.68" y="1479.12">+changeAction: ENUM = ('INSERT', 'UPDATE', 'DELETE')</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2235.68" y="1495.12">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2235.68" y="1516.12">+changeTable: VARCHAR(32)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2235.68" y="1532.12">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2235.68" y="1553.12">+changeDiff: TEXT</text>
+    <rect style="fill: #ffdbe1" x="2232.68" y="1559.92" width="410.4" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2232.68" y="1559.92" width="410.4" height="8"/>
   </g>
   <g>
     <rect style="fill: #ffdbe1" x="64.4658" y="172.541" width="310.3" height="28"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="64.4658" y="172.541" width="310.3" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="219.616" y="192.541">logElection</text>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="219.616" y="192.541">logPoll</text>
     <rect style="fill: #ffdbe1" x="64.4658" y="200.541" width="310.3" height="382"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="64.4658" y="200.541" width="310.3" height="382"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="67.4658" y="213.741">+logTime: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="67.4658" y="229.741">+logElectionID: INT</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="67.4658" y="229.741">+logPollID: INT</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="67.4658" y="245.741">INDEX</text>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="67.4658" y="266.741">+logType: ENUM</text>
     <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="67.4658" y="282.741">INDEX</text>
@@ -540,168 +541,214 @@
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="64.4658" y="582.541" width="310.3" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,50.9964 425.57,50.9964 425.57,226.542 374.766,226.542 "/>
-    <polygon style="fill: #ffffff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 451.764,50.9964 451.764,226.542 374.766,226.542 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="530.766" y="1396.5" width="287.2" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="530.766" y="1396.5" width="287.2" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="674.366" y="1416.5">Party</text>
-    <rect style="fill: #ffffff" x="530.766" y="1424.5" width="287.2" height="94"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="530.766" y="1424.5" width="287.2" height="94"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="533.766" y="1437.7">+partyID: SMALL_INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="533.766" y="1453.7">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="533.766" y="1474.7">+partyName: VARCHAR(32)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="533.766" y="1490.7">UNIQUE</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="533.766" y="1511.7">+partyURL: TEXT</text>
-    <rect style="fill: #ffffff" x="530.766" y="1518.5" width="287.2" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="530.766" y="1518.5" width="287.2" height="8"/>
+    <rect style="fill: #ffffff" x="634.42" y="1556.64" width="287.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="634.42" y="1556.64" width="287.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="778.02" y="1576.64">Party</text>
+    <rect style="fill: #ffffff" x="634.42" y="1584.64" width="287.2" height="94"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="634.42" y="1584.64" width="287.2" height="94"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="637.42" y="1597.84">+partyID: SMALL_INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="637.42" y="1613.84">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="637.42" y="1634.84">+partyName: VARCHAR(32)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="637.42" y="1650.84">UNIQUE</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="637.42" y="1671.84">+partyURL: TEXT</text>
+    <rect style="fill: #ffffff" x="634.42" y="1678.64" width="287.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="634.42" y="1678.64" width="287.2" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="512.53,1434.5 490.022,1434.5 490.022,1135.56 511.022,1135.56 "/>
-    <polygon style="fill: #ffffff" points="512.53,1442.5 528.53,1434.5 512.53,1426.5 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="512.53,1442.5 528.53,1434.5 512.53,1426.5 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="616.184,1594.64 591.676,1594.64 591.676,1262.97 612.676,1262.97 "/>
+    <polygon style="fill: #ffffff" points="616.184,1602.64 632.184,1594.64 616.184,1586.64 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="616.184,1602.64 632.184,1594.64 616.184,1586.64 "/>
   </g>
   <g>
-    <rect style="fill: #fdfdc5" x="967.722" y="810.574" width="395" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="967.722" y="810.574" width="395" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1165.22" y="830.574">joinElectionAdmin</text>
-    <rect style="fill: #fdfdc5" x="967.722" y="838.574" width="395" height="277"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="967.722" y="838.574" width="395" height="277"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="970.722" y="851.774">+joinElAdminElectionID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="867.774">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="970.722" y="888.774">+joinElAdminAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="904.774">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="970.722" y="925.774">+joinElAdminEnabled: BOOLEAN = 1</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="941.774">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="970.722" y="962.774">+joinElAdminCreated: DATE_TIME</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="978.774">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="970.722" y="999.774">+joinElAdminCreatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="1015.77">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="970.722" y="1036.77">+joinElAdminUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="1052.77">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="1066.77">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="970.722" y="1087.77">+joinElAdminUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="970.722" y="1103.77">INDEX</text>
-    <rect style="fill: #fdfdc5" x="967.722" y="1115.57" width="395" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="967.722" y="1115.57" width="395" height="8"/>
+    <rect style="fill: #fdfdc5" x="1165.08" y="759.574" width="410.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1165.08" y="759.574" width="410.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1370.28" y="779.574">joinPollAdmin</text>
+    <rect style="fill: #fdfdc5" x="1165.08" y="787.574" width="410.4" height="277"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1165.08" y="787.574" width="410.4" height="277"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1168.08" y="800.774">+joinPollAdminElectionID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="816.774">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1168.08" y="837.774">+joinPollAdminAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="853.774">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1168.08" y="874.774">+joinPollAdminEnabled: BOOLEAN = 1</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="890.774">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1168.08" y="911.774">+joinPollAdminCreated: DATE_TIME</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="927.774">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1168.08" y="948.774">+jjoinPollAdminCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="964.774">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1168.08" y="985.774">+joinPollAdminUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="1001.77">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="1015.77">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1168.08" y="1036.77">+joinPollAdminUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1168.08" y="1052.77">INDEX</text>
+    <rect style="fill: #fdfdc5" x="1165.08" y="1064.57" width="410.4" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1165.08" y="1064.57" width="410.4" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,50.9964 928.56,50.9964 928.56,848.574 967.722,848.574 "/>
-    <polygon style="fill: #ffffff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 1075.23,50.9964 1075.23,797.574 1165.08,797.574 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.95,1046.25 1419.95,885.574 1362.72,885.574 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.18,1020.07 1643.18,834.574 1575.48,834.574 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.07,1046.25 1872.07,1275.61 1908.99,1275.61 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,1438.92 2232.68,1438.92 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <rect style="fill: #fdfdc5" x="1928.42" y="440.712" width="395" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1928.42" y="440.712" width="395" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2125.92" y="460.712">joinElectionAdmin</text>
-    <rect style="fill: #fdfdc5" x="1928.42" y="468.712" width="395" height="277"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1928.42" y="468.712" width="395" height="277"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1931.42" y="481.912">+joinElAdminElectionID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="497.912">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1931.42" y="518.912">+joinElAdminAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="534.912">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1931.42" y="555.912">+joinElAdminEnabled: BOOLEAN = 1</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="571.912">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1931.42" y="592.912">+joinElAdminCreated: DATE_TIME</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="608.912">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1931.42" y="629.912">+joinElAdminCreatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="645.912">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1931.42" y="666.912">+joinElAdminUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="682.912">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="696.912">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1931.42" y="717.912">+joinElAdminUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1931.42" y="733.912">INDEX</text>
-    <rect style="fill: #fdfdc5" x="1928.42" y="745.712" width="395" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1928.42" y="745.712" width="395" height="8"/>
+    <rect style="fill: #fdfdc5" x="2231.5" y="449.546" width="410.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2231.5" y="449.546" width="410.4" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2436.7" y="469.546">joinPollAdmin</text>
+    <rect style="fill: #fdfdc5" x="2231.5" y="477.546" width="410.4" height="277"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2231.5" y="477.546" width="410.4" height="277"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2234.5" y="490.746">+joinPollAdminElectionID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="506.746">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2234.5" y="527.746">+joinPollAdminAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="543.746">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2234.5" y="564.746">+joinPollAdminEnabled: BOOLEAN = 1</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="580.746">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2234.5" y="601.746">+joinPollAdminCreated: DATE_TIME</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="617.746">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2234.5" y="638.746">+joinPollAdminCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="654.746">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2234.5" y="675.746">+joinPollAdminUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="691.746">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="705.746">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2234.5" y="726.746">+joinPollAdminUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2234.5" y="742.746">INDEX</text>
+    <rect style="fill: #fdfdc5" x="2231.5" y="754.546" width="410.4" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2231.5" y="754.546" width="410.4" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="1831.24,243.772 1854.06,243.772 1854.06,478.712 1928.42,478.712 "/>
-    <polygon style="fill: #ffffff" points="1831.24,235.772 1815.24,243.772 1831.24,251.772 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="1831.24,235.772 1815.24,243.772 1831.24,251.772 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="2085,191.717 2187.88,191.717 2187.88,487.546 2231.5,487.546 "/>
+    <polygon style="fill: #ffffff" points="2085,183.717 2069,191.717 2085,199.717 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00b6d8" points="2085,183.717 2069,191.717 2085,199.717 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.95,1046.25 1419.95,996.574 1362.72,996.574 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.18,1020.07 1643.18,945.574 1575.48,945.574 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1046.25 1419.8,1046.25 1419.8,1084.57 1362.72,1084.57 "/>
-    <polygon style="fill: #ffffff" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1443.41,1054.25 1459.41,1046.25 1443.41,1038.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1020.07 1643.12,1020.07 1643.12,1033.57 1575.48,1033.57 "/>
+    <polygon style="fill: #ffffff" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1706.41,1028.07 1722.41,1020.07 1706.41,1012.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.4,1046.25 1872.4,515.712 1928.42,515.712 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,524.546 2231.5,524.546 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.4,1046.25 1872.4,626.712 1928.42,626.712 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,635.546 2231.5,635.546 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.4,1046.25 1872.4,714.712 1928.42,714.712 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,723.546 2231.5,723.546 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,50.9964 425.948,50.9964 425.948,711.766 405.3,711.766 "/>
-    <polygon style="fill: #ffffff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="976.302,58.9964 992.302,50.9964 976.302,42.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 451.764,50.9964 451.764,863.324 418.238,863.324 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
   </g>
   <g>
-    <rect style="fill: #ffffff" x="1899.41" y="24.4848" width="433.5" height="28"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1899.41" y="24.4848" width="433.5" height="28"/>
-    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2116.16" y="44.4848">ReferendumOptions</text>
-    <rect style="fill: #ffffff" x="1899.41" y="52.4848" width="433.5" height="330"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1899.41" y="52.4848" width="433.5" height="330"/>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="65.6848">+referendumOptionID: INT = AUTO_INCREMENT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="81.6848">PRIMARY_KEY</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="102.685">+referendumOptionElectionID: INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="118.685">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="139.685">+referendumOptionName: VARCHAR(255)</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="155.685">UNIQUE:</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="169.685">candidateElection</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="183.685">ID +</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="197.685">candidateVoterID</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="218.685">+referendumOptionDetails: TEXT(2000)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="234.685">+referendumOptionURL: TEXT(1024)</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="250.685">+referendumOptionCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="266.685">+referendumOptionCreatedBy: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="282.685">INDEX</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="303.685">+referendumOptionUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="319.685">ON UPDATE</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="333.685">CURRENT_TIMESTAMP</text>
-    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1902.41" y="354.685">+referendumOptionUpdatedByAdminID: SMALL_INT</text>
-    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1902.41" y="370.685">INDEX</text>
-    <rect style="fill: #ffffff" x="1899.41" y="382.485" width="433.5" height="8"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1899.41" y="382.485" width="433.5" height="8"/>
+    <rect style="fill: #ffffff" x="2219.4" y="45.4848" width="433.5" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2219.4" y="45.4848" width="433.5" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="2436.15" y="65.4848">ReferendumOptions</text>
+    <rect style="fill: #ffffff" x="2219.4" y="73.4848" width="433.5" height="330"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2219.4" y="73.4848" width="433.5" height="330"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="86.6848">+referendumOptionID: INT = AUTO_INCREMENT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="102.685">PRIMARY_KEY</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="123.685">+referendumOptionPollID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="139.685">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="160.685">+referendumOptionName: VARCHAR(255)</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="176.685">UNIQUE:</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="190.685">candidateElection</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="204.685">ID +</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="218.685">candidateVoterID</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="239.685">+referendumOptionDetails: TEXT(2000)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="255.685">+referendumOptionURL: TEXT(1024)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="271.685">+referendumOptionCreated: DATE_TIME = CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="287.685">+referendumOptionCreatedBy: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="303.685">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="324.685">+referendumOptionUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="340.685">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="354.685">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2222.4" y="375.685">+referendumOptionUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="2222.4" y="391.685">INDEX</text>
+    <rect style="fill: #ffffff" x="2219.4" y="403.485" width="433.5" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="2219.4" y="403.485" width="433.5" height="8"/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1299.97,50.9964 1598.57,50.9964 1598.57,99.4848 1899.41,99.4848 "/>
-    <polygon style="fill: #ffffff" points="1299.97,42.9964 1283.97,50.9964 1299.97,58.9964 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1299.97,42.9964 1283.97,50.9964 1299.97,58.9964 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1457.53,50.9964 1837.35,50.9964 1837.35,120.485 2219.4,120.485 "/>
+    <polygon style="fill: #ffffff" points="1457.53,42.9964 1441.53,50.9964 1457.53,58.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1457.53,42.9964 1441.53,50.9964 1457.53,58.9964 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.22,1046.25 1872.22,351.484 1899.41,351.484 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,372.484 2219.4,372.484 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
   </g>
   <g>
-    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1046.25 1872.22,1046.25 1872.22,263.484 1899.41,263.484 "/>
-    <polygon style="fill: #ffffff" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="1828.69,1038.25 1812.69,1046.25 1828.69,1054.25 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.78,1020.07 2152.78,284.484 2219.4,284.484 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+  </g>
+  <g>
+    <rect style="fill: #fdfdc5" x="1172.94" y="1522.03" width="464.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1172.94" y="1522.03" width="464.3" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1405.09" y="1542.03">joinPollCohortFilter</text>
+    <rect style="fill: #fdfdc5" x="1172.94" y="1550.03" width="464.3" height="219"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1172.94" y="1550.03" width="464.3" height="219"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1175.94" y="1563.23">+joinPollCohortFilterPollID: INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1175.94" y="1579.23">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1175.94" y="1600.23">+joinPollCohortFilterCohortFilterID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1175.94" y="1616.23">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1175.94" y="1637.23">+joinPollCohortFilterCreated: DATE_TIME</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1175.94" y="1653.23">+joinPollCohortFilterCreatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1175.94" y="1669.23">INDEX</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1175.94" y="1690.23">+joinPollCohortFilterUpdated: TIMESTAMP = CURRENT_TIMESTAMP</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1175.94" y="1706.23">ON UPDATE</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1175.94" y="1720.23">CURRENT_TIMESTAMP</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1175.94" y="1741.23">+joinPollCohortFilterUpdatedByAdminID: SMALL_INT</text>
+    <text font-size="11.2" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1175.94" y="1757.23">INDEX</text>
+    <rect style="fill: #fdfdc5" x="1172.94" y="1769.03" width="464.3" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1172.94" y="1769.03" width="464.3" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,50.9964 1075.23,50.9964 1075.23,1560.03 1172.94,1560.03 "/>
+    <polygon style="fill: #ffffff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #0000ff" points="1164.66,58.9964 1180.66,50.9964 1164.66,42.9964 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.9,1020.07 2152.9,1650.03 1637.24,1650.03 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1020.07 2152.9,1020.07 2152.9,1738.03 1637.24,1738.03 "/>
+    <polygon style="fill: #ffffff" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" points="2091.7,1012.07 2075.7,1020.07 2091.7,1028.07 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" points="1721.45,1490.56 1679.53,1490.56 1679.53,1094.07 1724.65,1094.07 "/>
+    <polygon style="fill: #ffffff" points="1721.45,1498.56 1737.45,1490.56 1721.45,1482.56 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" points="1721.45,1498.56 1737.45,1490.56 1721.45,1482.56 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" points="1721.45,1490.56 1115.79,1490.56 1115.79,679.14 963.084,679.14 "/>
+    <polygon style="fill: #ffffff" points="1721.45,1498.56 1737.45,1490.56 1721.45,1482.56 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #db881d" points="1721.45,1498.56 1737.45,1490.56 1721.45,1482.56 "/>
   </g>
 </svg>
