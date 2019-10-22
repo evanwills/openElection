@@ -1,6 +1,6 @@
 # openElection
 
-`openElection` aims to provide a complete, flexible platform for managing elections and referenda.
+`openElection` aims to provide a complete, flexible platform for managing online elections and referenda.
 
 This project is based on lessons learned from maintaining the ACU's (Australian Catholic University) internal, home grown election system
 
